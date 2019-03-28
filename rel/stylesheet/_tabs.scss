@@ -1,0 +1,46 @@
+.tabs{
+   clear: both;
+   margin-bottom: 32px;
+}
+
+.tabsrow {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid $gray-20;
+    border-bottom: 0;
+    .tabsactive,
+    .tabsinactive {
+        justify-content: space-between;
+        flex-basis: 50%;
+        padding: 16px 18px 16px 19px;
+        @extend %h3;
+        text-align: center;
+        border-bottom: 1px solid $gray-20;
+        border-right: 1px solid $gray-20;
+    }
+    .tabsactive {
+        font-weight: 600;
+        border-bottom: 0;
+    }
+    .tabsinactive {
+        color: $primary;
+        cursor: pointer;
+    }
+}
+.tabsinactive:hover{
+    background: $lichtblauw;
+}
+.tabsrow div:last-of-type {
+    border-right: 0;
+}
+.tabspanes {
+        
+    .tabsactive{
+        border: 1px solid $gray-20;
+        border-top: 0;
+        padding: 32px;
+    }
+    .tabsinactive{
+        display: none;
+    }
+}

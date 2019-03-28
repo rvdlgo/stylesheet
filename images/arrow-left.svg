@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>arrow-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.4366254,24.3139913 L16.485303,25.2900389 C16.0824908,25.7033204 15.4311349,25.7033204 15.032608,25.2900389 L6.70210914,16.7474239 C6.29929695,16.3341424 6.29929695,15.6658576 6.70210914,15.2569728 L15.032608,6.70996107 C15.4354202,6.29667964 16.086776,6.29667964 16.485303,6.70996107 L17.4366254,7.6860087 C17.8437228,8.10368674 17.8351523,8.78516144 17.4194844,9.19404626 L12.255775,14.2413556 L24.5715434,14.2413556 C25.1414797,14.2413556 25.6,14.711793 25.6,15.2965422 L25.6,16.7034578 C25.6,17.288207 25.1414797,17.7586444 24.5715434,17.7586444 L12.255775,17.7586444 L17.4194844,22.8059537 C17.8394376,23.2148386 17.848008,23.8963133 17.4366254,24.3139913 Z" id="path-1"></path>
+    </defs>
+    <g id="arrow-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/functional/arrow-left">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="arrow-left" fill="#131516" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

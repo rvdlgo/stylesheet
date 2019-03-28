@@ -1,0 +1,35 @@
+.event-header {
+    clear: both;
+    margin-bottom: 32px;
+    border-bottom: 1px solid $gray-20;
+
+    h2 a {
+        position: relative;
+        @extend %pSmall;
+        color: $primary;
+        float: right;
+        text-decoration: none;
+        padding-right: 16px;
+
+        &::after {
+            position: absolute;
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            margin-left: 4px;
+            display: inline-block;
+            content: url("../../images/angle-right-16px.svg")
+        }
+        &:hover{
+            color: $oranje;
+        }
+    }
+
+    .event-date {
+        @extend %pSmall;
+        color: $zwart;
+        float: left;
+
+    }
+
+}

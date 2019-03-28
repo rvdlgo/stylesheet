@@ -1,0 +1,48 @@
+
+.image-default {
+    line-height: 1em;
+    padding-bottom: 1em;
+}
+
+.image-default .center {
+    float: none;
+    margin: 10px 0;
+}
+
+.image-default .left {
+    float: left;
+    margin: 5px 20px 10px 0;
+}
+
+.image-default .right {
+    float: right;
+    margin: 5px 10px 10px 20px;
+}
+
+.image-default .center {
+    clear: both;
+    display: block;
+    margin: 10px auto;
+    text-align: center
+}
+
+.image-default em {
+    display: block;
+}
+
+.g-grid-span3 .image-default,
+.g-grid-span4 .image-default,
+.g-grid-span6 .image-default,
+.g-grid-span8 .image-default,
+.g-grid-span9 .image-default {
+    margin-top: 8px
+}
+
+.maincontentarea .image-default a img {
+    border: 1px solid #fff;
+}
+
+.maincontentarea .image-default a img:hover {
+    border: solid 1px #131516;
+    transition: border-color .5s;
+}

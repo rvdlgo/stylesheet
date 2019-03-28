@@ -1,0 +1,73 @@
+input[type="text"],
+input[type="password"],
+input[type="search"],
+textarea {
+    border: 1px solid $gray-20;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-right: 16px;
+    &::placeholder{
+        @extend %pSmall;
+    }
+}
+.fieldgrp{
+    display: flex;
+    align-items: center;
+}
+
+.form-default {
+    width: 740px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.formsteps {
+    display: none;
+}
+
+.formtextbox,
+.formdate-default,
+.formradio,
+.formcheckbox,
+.formselect,
+.formfileupload {
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    padding: 5px 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.wm-field-list,
+.wm-field-dropdown {
+    margin-top: 5px;
+}
+
+.wm-field-label label {
+    font-size: 0.9em;
+}
+
+.wm-field-label label span {
+    margin-left: 4px;
+    color: #D14200;
+    font-size: 1.2em
+}
+
+.wm-field-helptext {
+    font-style: italic;
+}
+
+.wm_formelement_errors {
+    color: red;
+    float: left;
+    position: absolute;
+    margin: 30px 0 0 430px
+}

@@ -1,0 +1,18 @@
+.molist-default ul {
+    @extend %ul;
+}
+
+.molist-default {
+    
+    a {
+        display: inline-block;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid $gray-20;
+        padding: 4px;
+        }
+}
+
+.molist-default a:hover {
+    text-decoration: none;
+}

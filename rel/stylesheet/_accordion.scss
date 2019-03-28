@@ -1,0 +1,53 @@
+.listaccordion-default h2 {}
+
+
+.listaccordion-default {}
+
+.listaccordion-default dt {
+    font-weight: 500;
+    padding: 16px 0 8px 16px;
+    border-bottom: 1px solid $gray-20;
+}
+
+.listaccordion-default dt a {
+    display: block;
+    padding-right: 32px;
+    color: $oranje;
+    @extend %textdecorationnone;
+    background-image: url("../../images/angle-right.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right center;
+
+}
+
+.listaccordion-default dt.ui-accordion-header-active {
+    border-bottom: none;
+    background: $lichtblauw;
+
+}
+
+.listaccordion-default dt.ui-accordion-header-active a {
+    color: #d14200;
+    display: block;
+    padding-right: 32px;
+    background-image: url("../../images/angle-down.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right center;
+}
+
+.listaccordion-default dt a:hover {
+    color: #d14200;
+   
+}
+
+.accordion-inner {
+    padding: 16px;
+    background: $lichtblauw;
+
+}
+
+.accordion {
+    color: #131516;
+}

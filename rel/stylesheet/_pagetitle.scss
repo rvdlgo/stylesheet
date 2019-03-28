@@ -1,0 +1,21 @@
+.h1-wrapper {
+    
+
+   a {
+        display: inline-block;
+        height: 48px;
+        width: 48px;
+        padding-bottom: 8px;
+        margin: 0 16px 0 0;
+        border-bottom: 1px solid $zwart;
+        background: url("../../images/arrow-left.svg") no-repeat;
+       &:hover{
+        background: url("../../images/arrow-left-oranje.svg") no-repeat;
+       }
+    }
+    span{
+        padding: 0;
+        margin: 0;
+        padding-top: -8px;
+    }
+}

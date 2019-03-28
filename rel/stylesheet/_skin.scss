@@ -1,0 +1,130 @@
+#HCB_comment_box #HCB_comment_form_box {
+    padding-bottom: 1em;
+
+}
+
+#HCB_comment_form_box .btn {
+    @extend %button-primair;
+    text-decoration: none;
+}
+
+#HCB_comment_box {
+    background: $lichtblauw;
+    padding: 32px;
+
+    h3 {
+        @extend %h2;
+    }
+
+}
+#HCB_comment_form_box form{
+    display: flex;
+    flex-direction: column;
+}
+#HCB_comment_form_box form div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    input{
+        margin-top: 16px;
+    }
+    a{
+        display: none;
+    }
+}
+
+#hcb_form {
+    display: flex;
+    flex-direction: column;
+
+    .hcb-wrapper-half {
+        flex-basis: 100%;
+        padding: 8px 0;
+    }
+}
+
+#HCB_comment_box .hcb-link {
+    cursor: pointer
+}
+
+#HCB_comment_box .hcb-icon {
+    border: 0px transparent none
+}
+
+#HCB_comment_box textarea {
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%
+}
+
+#HCB_comment_box blockquote {
+    margin: 10px;
+    overflow: hidden
+}
+
+#HCB_comment_box .hcb-err {
+    color: red
+}
+
+#HCB_comment_box .hcb-comment-tb {
+    margin: 0
+}
+
+#HCB_comment_box .comment {
+    position: relative
+}
+
+#HCB_comment_box .comment .likes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.8
+}
+
+#HCB_comment_box .comment .hcb-comment-tb a {
+    visibility: hidden
+}
+
+#HCB_comment_box .comment:hover .hcb-comment-tb a {
+    visibility: visible
+}
+
+#HCB_comment_box .gravatar {
+    padding-right: 2px
+}
+
+#HCB_comment_box input {
+    margin-left: 0;
+
+}
+
+#HCB_comment_box input[type="file"] {
+    display: none
+}
+
+#HCB_comment_box input.inputfile {
+    width: .1px;
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
+}
+
+#HCB_comment_box input.inputfile + label {
+    display: inline
+}
+
+/* end inline */
+
+#hcb_msg {
+    display: none;
+}
+
+.home-desc {
+    display: none !important;
+}

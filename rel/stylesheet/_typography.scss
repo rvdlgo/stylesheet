@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: $neutral-100;
+    font-family: 'museo-sans-rounded', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.45em;
+    color: $zwart;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+
+
+%h1 {
+    font-size: 41px;
+    letter-spacing: 0.76px;
+    color: $zwart;
+    font-weight: 500;
+    line-height: 1.25em;
+    padding-bottom: 32px;
+}
+
+h1,
+.h1,
+    {
+    @extend %h1;
+}
+
+%h2 {
+    font-size: 27px;
+    letter-spacing: 0.5px;
+    color: $oranje;
+    font-weight: 500;
+    line-height: 1.25em;
+    padding-bottom: 1.25em;
+
+    text-transform: uppercase;
+}
+
+h2,
+.h2 {
+    @extend %h2;
+}
+
+%h3 {
+    font-size: 18px;
+    letter-spacing: 0.33px;
+    color: $zwart;
+    font-weight: 500;
+    line-height: 1.25em;
+    padding-bottom: 1.25em;
+
+}
+
+h3,
+.h3 {
+    @extend %h3;
+}
+
+
+%h4 {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    color: $zwart;
+    font-weight: 500;
+    line-height: 1.25em;
+    padding-bottom: 1.25em;
+}
+
+h4,
+.h4 {
+    @extend %h4;
+}
+
+%h5 {
+    font-size: 14px;
+    letter-spacing: 0.26px;
+    color: $zwart;
+    font-weight: 500;
+    line-height: 1.25em;
+    padding-bottom: 1.25em;
+    text-transform: uppercase;
+}
+
+h5,
+.h5 {
+    @extend %h5;
+}
+
+%p {
+    margin-bottom: 0.5em;
+}
+
+p,
+.p,
+.text,
+a {
+    @extend %p;
+}
+
+%pSmall {
+    font-size: 16px;
+}
+
+%pSmaller {
+    font-size: 14px;
+}
+
+%textdecorationnone{
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    a {
+        color: $zwart;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &visited {
+            color: $zwart;
+        }
+    }
+}
+
+strong {
+    font-weight: 500;
+}
+
+em {
+    font-family: 'museo-sans-rounded';
+    font-weight: 300;
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 32px;
+    font-family: museo-sans-rounded;
+    font-weight: 500;
+    color: $oranje;
+    border-left: 2px solid $oranje;
+}
+
+hr {
+    margin-top: 20px;
+    height: 1px;
+    border-width: 0;
+    color: $gray-20;
+    background-color:  $gray-20;;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+    padding-left: 32px;
+}
+
+ol ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 16px;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+%ol {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+%ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}

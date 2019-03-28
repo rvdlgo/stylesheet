@@ -1,0 +1,74 @@
+.site-navigation {
+    position: fixed;
+    width: 100%;
+    max-width: 1120px;
+    top: 96px;
+    padding: 40px 16px 16px 16px;
+    margin: 0 0 16px 0;
+    background-color: $lichtblauw;
+
+    h2 {
+        font-size: 18px;
+    }
+
+
+    a {
+        @extend %pSmall;
+        font-weight: 500;
+        color: $zwart;
+        text-decoration: none;
+
+        &:hover {
+            color: $oranje;
+        }
+    }
+
+    h5 {
+        border-bottom: 0;
+        border-top: 1px solid $gray-40;
+        padding-top: 4px;
+
+        a {
+            display: flex;
+            align-items: center;
+
+            &::after {
+                content: url("../../images/arrow-right-16px.svg");
+                margin-left: 4px;
+
+            }
+        }
+
+
+    }
+
+}
+
+.site-navigation .g-grid-span3 {
+    float: left;
+    width: calc(25% - 32px);
+}
+
+.site-navigation .g-grid-span3.last {}
+
+
+.site-navigation .close-menu {
+    display: block;
+    overflow: hidden;
+
+    a {
+        color: transparent;
+        display: flex;
+        flex-direction: row-reverse;
+        clear: both;
+
+        &::before {
+            content: url("../../images/close-subnavigation.svg");
+            color: transparent;
+            cursor: pointer;
+        }
+        &:hover::before{
+            content: url("../../images/close-subnavigation-hover.svg");
+        }
+    }
+}

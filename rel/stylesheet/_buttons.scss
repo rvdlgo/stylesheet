@@ -1,0 +1,24 @@
+input[type="text"]:hover {
+    background-color: #DFEAEE
+}
+
+%button-primair {
+    color: $neutral-100;
+    border: 0;
+    @extend %h3;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: $secundair;
+    @extend %z-index-2dp;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $donkerblauw;
+        @extend %z-index-6dp;
+    }
+}
+
+input[type="submit"] {
+ @extend %button-primair
+}

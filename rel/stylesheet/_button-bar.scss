@@ -1,0 +1,20 @@
+.buttonBar .g-grid-row {
+    align-items: stretch;
+}
+
+.buttonBar .g-grid-span4 {
+    background: $lichtblauw;
+    border-radius: 16px 16px 16px 0;
+    &:hover{
+        @extend %z-index-4dp;
+    }
+
+}
+
+.buttonBar h4 {
+    text-align: center;
+}
+
+.buttonBar .image-default {
+    padding: 0 32px;
+}

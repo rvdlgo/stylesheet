@@ -1,0 +1,49 @@
+table {
+    margin: 20px 0 20px 0;
+}
+
+table.clear {
+    width: 100%;
+    clear: both;
+}
+
+table.right {
+    float: right;
+    margin-left: 20px;
+}
+
+table.left {
+    float: left;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+table.center {
+    margin: 0 auto;
+    clear: both;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid $lichtblauw;
+}
+
+tr.odd {
+    background-color: $gray-20;
+}
+
+th {
+    font-weight: 500;
+    background-color: $lichtblauw;
+}
+
+table caption {
+    color: $oranje;
+    padding: 32px 0 8px 0;
+}
+
+.gridtable td {
+    border: 0;
+    padding: 0
+}

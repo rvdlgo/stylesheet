@@ -1,0 +1,36 @@
+.paging-default,
+.paging-nieuws-overzicht {
+    clear: both;
+    padding: 32px 0;
+    border-top: 1px solid $gray-20;
+}
+.paging-default .wrapper,
+.paging-nieuws-overzicht .wrapper {
+    display: flex;
+
+    .activeLink,
+    a.paginglink,
+    .more {
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 0 4px;
+        border-radius: 4px;
+        color: $zwart;
+        text-decoration: none;
+        background: $lichtblauw;
+        &:hover {
+            background: $donkerblauw;
+            color: $neutral-100;
+        }
+    }
+    .activeLink,
+    .more {
+        background: none;
+        &:hover {
+            background: none;
+            color: $zwart;
+        }
+    }
+
+}
+

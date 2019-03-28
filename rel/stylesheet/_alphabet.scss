@@ -1,0 +1,80 @@
+.anchor-alphabet {
+    clear: both;
+    padding: 32px 0;
+    border-top: 1px solid $gray-20;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        @extend %ul;
+
+        li {
+            margin: 4px;
+            align-items: stretch;
+        }
+    }
+
+    li a {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 4px;
+        min-width: 48px;
+        font-weight: 500;
+        color: $zwart;
+        text-decoration: none;
+        background: $lichtblauw;
+
+        &:hover {
+            background: $donkerblauw;
+            color: $neutral-100;
+        }
+
+    }
+}
+
+
+
+.anchor-alphabet li a.active {}
+
+.anchor-alphabet li a.grayed-out {}
+
+.anchor-alphabet li a.grayed-out:hover {}
+
+.anchor-alphabet li a:hover {}
+
+.anchor-alphabet li:last-child a {}
+
+.anchor-alphabet li:last-child a:after {
+    content: attr(data-task-owner)" - 9";
+}
+
+.backtotop {
+    display: block;
+    background: rgba(0, 0, 0, 0) url("../../images/bactotop.png") no-repeat right;
+    height: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.listbulleted-alphabet {
+    h2 {
+        border-bottom: 1px solid $gray-20;
+        padding-bottom: 16px;
+    }
+
+    .wrapper {
+        display: flex;
+        align-content: space-between;
+
+        ul {
+            @extend %ul;
+            flex-basis: calc(50% - 16px);
+            padding-top: 8px;
+               
+        }
+        li a{
+            display: block;
+            padding: 4px 0;
+        }
+    }
+}

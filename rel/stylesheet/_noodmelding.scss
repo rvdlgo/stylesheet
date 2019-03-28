@@ -1,0 +1,9 @@
+.paragraph-melding {
+    flex-basis: 100%;
+    background-color: $lichtblauw;
+
+    .text {
+        @extend %h3;
+        color: $neutral-100;
+    }
+}
