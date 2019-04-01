@@ -1,12 +1,20 @@
-html,
-body,
-#container-wrapper,
-#container,
-#main-wrapper,
-#main {
-    height: 100%;
+/* base */
+html {
+    box-sizing: border-box;
+    font-size: 18px
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: transparent;
+}
+
+/* end base */
 #header-wrapper {
     position: fixed;
     top: 40px;

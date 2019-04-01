@@ -1,0 +1,11 @@
+.intro {
+    .g-grid-span8 {
+        h2 {
+            @extend %h2;
+        }
+
+        p {
+            @extend %p;
+        }
+    }
+}

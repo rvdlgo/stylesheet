@@ -1,13 +1,15 @@
-@import 'normalize';
-/* atoms */
+@import "normalize/import-now";
+@import "mediaqueries";
+@import "dimensions";
 
+/* atoms */
 @import 'fonts';
 @import 'colors';
 @import 'typography';
 @import 'elevation';
 @import 'lay-out';
-@import 'images';
 @import 'lay-outs';
+@import 'images';
 @import 'links';
 
 /* molecules */
@@ -28,6 +30,8 @@
 @import 'alphabet';
 @import 'poll';
 @import 'noodmelding';
+@import 'intro';
+
 /* organismes */
 @import 'skin';
 @import 'mediaoverzicht';

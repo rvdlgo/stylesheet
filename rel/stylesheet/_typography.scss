@@ -3,23 +3,22 @@ body {
     padding: 0;
     background: $neutral-100;
     font-family: 'museo-sans-rounded', sans-serif;
-    font-size: 18px;
     font-weight: 300;
     line-height: 1.45em;
     color: $zwart;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 
 
 
 %h1 {
-    font-size: 41px;
+    font-size: 2.25em;
     letter-spacing: 0.76px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
-    padding-bottom: 32px;
 }
 
 h1,
@@ -29,14 +28,13 @@ h1,
 }
 
 %h2 {
-    font-size: 27px;
+    font-size: 1.5em;
     letter-spacing: 0.5px;
     color: $oranje;
     font-weight: 500;
     line-height: 1.25em;
-    padding-bottom: 1.25em;
 
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 h2,
@@ -45,12 +43,11 @@ h2,
 }
 
 %h3 {
-    font-size: 18px;
+    font-size: 1em;
     letter-spacing: 0.33px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
-    padding-bottom: 1.25em;
 
 }
 
@@ -61,12 +58,11 @@ h3,
 
 
 %h4 {
-    font-size: 16px;
+    font-size: 0.888888888888889rem;
     letter-spacing: 0.3px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
-    padding-bottom: 1.25em;
 }
 
 h4,
@@ -75,12 +71,11 @@ h4,
 }
 
 %h5 {
-    font-size: 14px;
+    font-size: 0.777777777777778rem;
     letter-spacing: 0.26px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
-    padding-bottom: 1.25em;
     text-transform: uppercase;
 }
 
@@ -90,7 +85,7 @@ h5,
 }
 
 %p {
-    margin-bottom: 0.5em;
+    margin-bottom: 1rem;
 }
 
 p,
@@ -101,11 +96,11 @@ a {
 }
 
 %pSmall {
-    font-size: 16px;
+    font-size: 0.888888888888889rem;
 }
 
 %pSmaller {
-    font-size: 14px;
+    font-size: 0.777777777777778rem;
 }
 
 %textdecorationnone{
@@ -119,6 +114,7 @@ h4,
 h5,
 h6,
 strong {
+    margin: 0;
     a {
         color: $zwart;
 
@@ -178,11 +174,11 @@ ul ul {
 
 %ol {
     list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }
 %ul {
     list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }

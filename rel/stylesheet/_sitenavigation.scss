@@ -7,10 +7,19 @@
     margin: 0 0 16px 0;
     background-color: $lichtblauw;
 
-    h2 {
-        font-size: 18px;
+    h2, a,
+    p {
+        margin: 0;
+        padding: 0;
     }
 
+    h2 {
+        font-size: 1rem;
+        border-bottom: 1px solid $gray-30;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
 
     a {
         @extend %pSmall;
@@ -25,8 +34,9 @@
 
     h5 {
         border-bottom: 0;
-        border-top: 1px solid $gray-40;
-        padding-top: 4px;
+        border-top: 1px solid $gray-30;
+        padding: 4px 0 0;
+        margin: 8px 0 32px;
 
         a {
             display: flex;
@@ -67,7 +77,8 @@
             color: transparent;
             cursor: pointer;
         }
-        &:hover::before{
+
+        &:hover::before {
             content: url("../../images/close-subnavigation-hover.svg");
         }
     }
