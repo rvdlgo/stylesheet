@@ -1,6 +1,6 @@
-@import "normalize/import-now";
-@import "mediaqueries";
-@import "dimensions";
+@import 'normalize/import-now';
+@import 'mediaqueries';
+@import 'dimensions';
 
 /* atoms */
 @import 'fonts';
@@ -39,10 +39,14 @@
 @import 'subnavigation';
 @import 'zoekresultaten';
 
+/* csm */
+@import 'incontext';
+
+
+/* back-up up 
 a.meer:visited {
     color: #1D7988;
 }
-
 
 .article-default a.button {
     display: inline-block;
@@ -67,14 +71,6 @@ a.meer:visited {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
 
 .ui-autocomplete {
     background-color: #fff;
@@ -103,26 +99,8 @@ a.meer:visited {
 
 
 
-
-
-
-
-.column-wider h2 {
-    font-size: 0.85em
-}
-
-
-/* media overzichten  */
-
-
-
-
 .article-default {}
 
-
-.article-default .postdate {
-    display: none;
-}
 
 .event_data_list {
     margin-bottom: 5px;
@@ -264,118 +242,6 @@ a.meer:visited {
     background-color: #fff;
 }
 
-.download-amc {
-    clear: both;
-    overflow: hidden;
-}
-
-.download-amc .download {
-    display: inline-block;
-    float: left;
-}
-
-.download-amc .filesize {
-    display: inline-block;
-    float: left;
-    color: #1D7988;
-    font-size: 0.8em;
-}
-
-.download-amc .clearer {
-    clear: both
-}
-
-.download-amc .download a {
-    display: inline-block;
-    padding: 4px 10px 4px 40px;
-    float: left;
-    font-size: 0.9em;
-    color: #131516;
-}
-
-.download-amc a:hover {
-    color: #131516;
-}
-
-.download-amc .ai {
-    background: url("../../images/icons_ai.png") no-repeat
-}
-
-.download-amc .cdr {
-    background: url("../../images/icons_cdr.png") no-repeat
-}
-
-.download-amc .doc {
-    background: url("../../images/icons_doc.png") no-repeat
-}
-
-.download-amc .docx {
-    background: url("../../images/icons_docx.png") no-repeat
-}
-
-.download-amc .mov {
-    background: url("../../images/icons_mov.png") no-repeat
-}
-
-.download-amc .mp3 {
-    background: url("../../images/icons_mp3.png") no-repeat
-}
-
-.download-amc .pdf {
-    background: url("../../images/icons_pdf.png") no-repeat
-}
-
-.download-amc .png {
-    background: url("../../images/icons_png.png") no-repeat
-}
-
-.download-amc .ppt {
-    background: url("../../images/icons_ppt.png") no-repeat
-}
-
-.download-amc .pptx {
-    background: url("../../images/icons_pptx.png") no-repeat
-}
-
-.download-amc .psd {
-    background: url("../../images/icons_psd.png") no-repeat
-}
-
-.download-amc .pub {
-    background: url("../../images/icons_pub.png") no-repeat
-}
-
-.download-amc .rar {
-    background: url("../../images/icons_rar.png") no-repeat
-}
-
-.download-amc .tiff {
-    background: url("../../images/icons_tiff.png") no-repeat
-}
-
-.download-amc .wav {
-    background: url("../../images/icons_wav.png") no-repeat
-}
-
-.download-amc .wma {
-    background: url("../../images/icons_wma.png") no-repeat
-}
-
-.download-amc .wmv {
-    background: url("../../images/icons_wmv.png") no-repeat
-}
-
-.download-amc .xls {
-    background: url("../../images/icons_xls.png") no-repeat
-}
-
-.download-amc .xlsx {
-    background: url("../../images/icons_xlsx.png") no-repeat
-}
-
-.download-amc .zip {
-    background: url("../../images/icons_zip.png") no-repeat
-}
 
 .download-amc h2 a,
 .column-wider .download-amc {
@@ -401,20 +267,6 @@ select[id="searchresult-order"] {
 }
 
 
-
-
-/* conflict .page class
-.pagecollection .page {
-    line-height: normal;
-    margin: 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    height: 85px;
-    overflow: hidden
-}
-*/
 
 .pagecollection p {
     display: block !important;
@@ -490,7 +342,7 @@ select[id="searchresult-order"] {
 .skiplinks {
     display: none;
 }
-*/
+
 
 
 .molist-default .itemdate,
@@ -513,22 +365,7 @@ select[id="searchresult-order"] {
 }
 
 
-.incontext .g-grid-span3,
-.incontext .g-grid-span4,
-.incontext .g-grid-span6,
-.incontext .g-grid-span8,
-.incontext .g-grid-span9 {
-    min-height: 100px;
-    background-color: #EDF7FC;
-}
 
-div.editableContainer {
-    min-height: 0px;
-}
-
-.incontext div.editableContainer {
-    min-height: 40px;
-}
 
 
 .ui-state-active {
@@ -541,5 +378,5 @@ div.editableContainer {
     clear: both;
 }
 
-
+*/
 

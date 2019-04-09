@@ -1,0 +1,229 @@
+@import 'mediaqueries';
+@import 'colors';
+@import 'elevation';
+
+/* frontend niet tonen van elementen omdat csm herinrichten nog niet aan de orde is*/
+
+.sitewidepages {
+    display: none;
+}
+
+#header-wrapper {
+    top: 0;
+
+    .navigation-default,
+    .search-default {
+        display: none;
+    }
+
+}
+
+/* layout aanpassingen*/
+#main-inner {
+    padding-top: 64px;
+}
+
+.afdelingspagina,
+.afdelingspaginaPaginatitel {
+    .column-wide {
+        flex-basis: 100%;
+        padding-top: 32px;
+    }
+}
+
+/* headerimage als inzet */
+.column-wide .pagesection-default {
+    background: $neutral-100;
+    width: fit-content;
+    margin: 104px 0 64px 0;
+    padding: 32px;
+    max-width: calc(50% - 32px);
+
+    .editableContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2,
+    h3 {
+        margin: 0;
+
+    }
+
+    &:before {
+        content: url("../../images/Image/farma.jpg");
+        position: absolute;
+        width: 100%;
+        /* kan ook met juist formaat beeld */
+        height: 320px;
+        overflow: hidden;
+        z-index: -100;
+        left: 0;
+        top: 64px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* geen navigatie op home */
+
+.afdelingspagina {
+    .clustertitle-wrapper {
+        display: none;
+    }
+}
+
+/* aanpassing subnavigatie */
+.afdelingspaginaPaginatitel .clustertitle-wrapper {
+    flex-direction: row;
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -100;
+        left: 0;
+        top: 64px;
+        width: 100%;
+        height: 149px;
+        background-color: #F2DB45;
+
+
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -100;
+        left: 0;
+        top: 213px;
+        width: 100%;
+        height: 56px;
+        border: 1px solid $gray-50;
+        background-color: $neutral-100;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 32px 0 0;
+
+        a:hover {
+            color: $zwart;
+        }
+    }
+
+    .subnavigation-default {
+        display: none;
+
+        @include mq('tablet-portrait') {
+            display: block;
+            padding: 8px 16px;
+            background: transparent;
+
+
+        }
+
+    }
+
+    .open-subnavigation {
+        display: block;
+
+        @include mq('tablet-portrait') {
+            display: none;
+        }
+
+    }
+}
+
+.afdelingspaginaPaginatitel .subnavigation-default {
+    display: block;
+    padding: 0 !important;
+
+
+    ul {
+        border: 0;
+        padding: 0;
+        width: fit-content;
+
+        li {
+            flex-basis: auto;
+
+
+            a {
+                font-size: 16px;
+                font-weight: 500;
+                padding: 18px 16px 16px 16px;
+                border-top: 1px solid $gray-50;
+                border-bottom: 1px solid $gray-50;
+                border-right: 1px solid $gray-50;
+
+                &:hover {
+                    border-bottom: 4px solid $oranje;
+                    padding-bottom: 12px;
+                }
+
+
+
+            }
+
+            &:first-child {
+                border-left: 1px solid $gray-50;
+            }
+        }
+    }
+}
+
+
+.searchopzet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .block-default {
+        flex-basis: calc(75% - 16px);
+    }
+
+    .block-default:first-of-type {
+        flex-basis: calc(25% - 16px);
+    }
+
+    .facet-title:nth-child(1),
+    .facet-items:nth-child(2),
+    .search-result-count,
+    .search-result-index,
+    .block-more {
+        display: none;
+    }
+
+    .search-wrapper ol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+            flex-basis: calc(50% - 16px);
+            @extend %z-index-2dp;
+            padding: 16px;
+
+            &:hover {
+                @extend %z-index-4dp;
+            }
+
+            a {
+                text-decoration: none;
+                color: $zwart;
+
+                &:hover,
+                &:visited {
+                    color: $zwart;
+                }
+            }
+        }
+    }
+
+}

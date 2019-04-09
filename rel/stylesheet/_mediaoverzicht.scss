@@ -1,20 +1,52 @@
-
 .modiv-teaser .wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: stretch;
+
     .item {
         margin: 8px;
         flex-basis: calc(50% - 16px);
         border-top: 1px solid $gray-20;
         padding-top: 16px;
-        .thumb a img{
+
+        .thumb a img {
             width: 100%;
             height: auto;
             margin-bottom: 16px;
         }
-    
-}
-}
 
+    }
+}
+/* class aanpassen backend naar generiek */
+.modiv-Farmacopedia_image_titel_description .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .item {
+        flex-basis: calc(33% - 32px);
+        @extend %z-index-4dp;
+        padding-bottom: 16px;
+        
+        a{
+            text-decoration: none;
+            color:$zwart;
+            &:hover{
+                color:$zwart;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+        }
+        .title, .text{
+            padding: 0 16px;
+        }
+
+    }
+}

@@ -1,0 +1,16 @@
+.incontext .g-grid-span3,
+.incontext .g-grid-span4,
+.incontext .g-grid-span6,
+.incontext .g-grid-span8,
+.incontext .g-grid-span9 {
+    min-height: 100px;
+    background-color: $lichtblauw;
+}
+
+div.editableContainer {
+    min-height: 40px;
+}
+
+.incontext div.editableContainer {
+    min-height: 40px;
+}

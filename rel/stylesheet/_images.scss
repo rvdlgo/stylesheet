@@ -15,6 +15,9 @@ div {
     @include responsive-ratio(16,9);
 }
 */
+figure{
+    margin: 0;
+}
 
 .image-default {
     line-height: 1em;

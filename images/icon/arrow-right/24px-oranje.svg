@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>icon/arrow-right/24px-oranje</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.5633746,7.6860087 L15.514697,6.70996107 C15.9175092,6.29667964 16.5688651,6.29667964 16.967392,6.70996107 L25.2978909,15.2525761 C25.700703,15.6658576 25.700703,16.3341424 25.2978909,16.7430272 L16.967392,25.2900389 C16.5645798,25.7033204 15.913224,25.7033204 15.514697,25.2900389 L14.5633746,24.3139913 C14.1562772,23.8963133 14.1648477,23.2148386 14.5805156,22.8059537 L19.744225,17.7586444 L7.42845665,17.7586444 C6.85852025,17.7586444 6.4,17.288207 6.4,16.7034578 L6.4,15.2965422 C6.4,14.711793 6.85852025,14.2413556 7.42845665,14.2413556 L19.744225,14.2413556 L14.5805156,9.19404626 C14.1605624,8.78516144 14.151992,8.10368674 14.5633746,7.6860087 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/arrow-right/24px-oranje" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/functional/arrow-right">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="arrow-right" fill="#D14200" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

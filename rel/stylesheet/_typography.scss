@@ -14,11 +14,16 @@ body {
 
 
 %h1 {
-    font-size: 2.25em;
-    letter-spacing: 0.76px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
+    letter-spacing: 0.76px;
+    font-size: 1.5rem;
+
+    @include mq('tablet-portrait') {
+        font-size: 2.25rem;
+    }
+
 }
 
 h1,
@@ -28,13 +33,17 @@ h1,
 }
 
 %h2 {
-    font-size: 1.5em;
-    letter-spacing: 0.5px;
     color: $oranje;
     font-weight: 500;
     line-height: 1.25em;
+    letter-spacing: 0.5px;
+    font-size: 1.166666666666667rem;
 
-    /*text-transform: uppercase;*/
+    @include mq('tablet-portrait') {
+        font-size: 1.5rem;
+    }
+
+    /* verwijder text-transform: uppercase; maar kan redactioneel problemen opleveren*/
 }
 
 h2,
@@ -43,11 +52,15 @@ h2,
 }
 
 %h3 {
-    font-size: 1em;
-    letter-spacing: 0.33px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
+    letter-spacing: 0.33px;
+    font-size: 0.888888888888889rem;
+
+    @include mq('tablet-portrait') {
+        font-size: 1rem;
+    }
 
 }
 
@@ -58,11 +71,15 @@ h3,
 
 
 %h4 {
-    font-size: 0.888888888888889rem;
-    letter-spacing: 0.3px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
+    letter-spacing: 0.3px;
+    font-size: 0.777777777777778rem;
+
+    @include mq('tablet-portrait') {
+        font-size: 0.888888888888889rem;
+    }
 }
 
 h4,
@@ -71,11 +88,10 @@ h4,
 }
 
 %h5 {
-    font-size: 0.777777777777778rem;
-    letter-spacing: 0.26px;
     color: $zwart;
     font-weight: 500;
     line-height: 1.25em;
+    letter-spacing: 0.26px;
     text-transform: uppercase;
 }
 
@@ -86,24 +102,33 @@ h5,
 
 %p {
     margin-bottom: 1rem;
+    font-size: 0.888888888888889rem;
+
+    @include mq('tablet-portrait') {
+        font-size: 1rem;
+    }
 }
 
 p,
 .p,
-.text,
-a {
+.text, {
     @extend %p;
 }
 
 %pSmall {
-    font-size: 0.888888888888889rem;
+    font-size: 0.777777777777778rem;
+
+    @include mq('tablet-portrait') {
+        font-size: 0.888888888888889rem;
+        ;
+    }
 }
 
 %pSmaller {
     font-size: 0.777777777777778rem;
 }
 
-%textdecorationnone{
+%textdecorationnone {
     text-decoration: none;
 }
 
@@ -114,7 +139,7 @@ h4,
 h5,
 h6,
 strong {
-    margin: 0;
+
     a {
         color: $zwart;
 
@@ -126,6 +151,9 @@ strong {
             color: $zwart;
         }
     }
+}
+time, .lastmodifieddate{
+    @extend %pSmall;
 }
 
 strong {
@@ -142,7 +170,6 @@ blockquote {
     padding-left: 32px;
     font-family: museo-sans-rounded;
     font-weight: 500;
-    color: $oranje;
     border-left: 2px solid $oranje;
 }
 
@@ -151,7 +178,7 @@ hr {
     height: 1px;
     border-width: 0;
     color: $gray-20;
-    background-color:  $gray-20;;
+    background-color: $gray-20;
 }
 
 ol {
@@ -177,6 +204,7 @@ ul ul {
     margin: 0;
     padding: 0;
 }
+
 %ul {
     list-style-type: none;
     margin: 0;

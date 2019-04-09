@@ -1,9 +1,17 @@
 .paragraph-melding {
-    flex-basis: 100%;
-    background-color: $lichtblauw;
+background-color: #F2DB45;
+            flex-basis: 100%;
+    
+
+    .wrapper {
+
+        
+    }
 
     .text {
+
+        padding: 32px;
         @extend %h3;
-        color: $neutral-100;
+        color: $zwart;
     }
 }

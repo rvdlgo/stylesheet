@@ -1,12 +1,17 @@
 /* logo */
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1152px;
+    justify-content: flex-start;
     padding: 0 0.888888888888889rem;
-    margin: auto;
+
+    @include mq('tablet-landscape') {
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1152px;
+        margin: auto;
+    }
+
 
     input[type="search"],
     input[type="submit"] {
@@ -15,10 +20,16 @@ header {
 }
 
 .header_logo {
-    padding: 32px 24px 4px 24px;
-    background-color: $neutral-100;
-    border-radius: 40px;
-    border-bottom: 2px solid $gray-30;
+    @include mq('tablet-landscape') {
+        padding: 32px 24px 4px 24px;
+        background-color: $neutral-100;
+        border-radius: 40px;
+        border-bottom: 2px solid $gray-30;
+    }
+    img{
+        
+    }
+
 }
 
 .navigation-default {
