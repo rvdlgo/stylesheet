@@ -1,53 +1,49 @@
-.listaccordion-default h2 {}
+.listaccordion-default {
+    width: 100%;
 
+    .ui-accordion-header {
+        margin-top: 16px;
+    }
 
-.listaccordion-default {}
+    .ui-accordion-header-active a,
+    .ui-accordion-header-collapsed a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @extend %h3;
+        text-decoration: none;
+        border: 1px solid $gray-20;
+        padding: 12px 16px;
 
-.listaccordion-default dt {
-    font-weight: 500;
-    padding: 16px 0 8px 16px;
-    border-bottom: 1px solid $gray-20;
-}
+        &:after {
+            content: url("../../images/angle-right-16px.svg");
+        }
 
-.listaccordion-default dt a {
-    display: block;
-    padding-right: 32px;
-    color: $oranje;
-    @extend %textdecorationnone;
-    background-image: url("../../images/angle-right.png");
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: right center;
+    }
 
-}
+    .ui-accordion-header-collapsed {
+        a {
+            color: $primary;
+        }
 
-.listaccordion-default dt.ui-accordion-header-active {
-    border-bottom: none;
-    background: $lichtblauw;
+        &:hover {
+            background: $lichtblauw;
 
-}
+        }
+    }
 
-.listaccordion-default dt.ui-accordion-header-active a {
-    color: #d14200;
-    display: block;
-    padding-right: 32px;
-    background-image: url("../../images/angle-down.png");
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: right center;
-}
+    .ui-accordion-header-active a {
+        border-bottom: 0;
 
-.listaccordion-default dt a:hover {
-    color: #d14200;
-   
-}
+        &:after {
+            content: url("../../images/angle-down-16px.svg");
+        }
+    }
 
-.accordion-inner {
-    padding: 16px;
-    background: $lichtblauw;
-
-}
-
-.accordion {
-    color: #131516;
+    .ui-accordion-content {
+        margin: 0;
+        padding: 12px 16px;
+        border: 1px solid $gray-20;
+        border-top: 0;
+    }
 }

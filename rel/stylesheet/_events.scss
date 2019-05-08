@@ -1,0 +1,27 @@
+.article-default {
+    h2:first-of-type{
+        @extend %h1;
+    }
+   .paragraph p:first-of-type{
+        @extend %h3;
+    }
+}
+.postdate{
+    @extend %h5;
+}
+
+.event_data_list {
+   
+}
+
+.block-event_data {
+
+}
+
+.event_data {
+
+}
+
+.event_data h2 {
+
+}

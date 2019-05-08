@@ -2,10 +2,11 @@
     .g-grid-span8 {
         h2 {
             @extend %h2;
+            margin-top: 0;
         }
 
         p {
-            @extend %p;
+            font-size: 1.125rem;
         }
     }
 }

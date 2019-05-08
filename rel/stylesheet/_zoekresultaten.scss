@@ -1,98 +1,53 @@
-/*.search-zoekzoekresultaten{
-
-
-
-.block-searchresults .publicationDate {
-    font-size: 0.8em;
-    float: left;
-    margin: 0 10px 0 0;
-}
-
-.block-searchresults .eventtype {
-    margin-right: 10px;
-    padding-left: 10px;
-    border-left: 1px solid #131516;
-    float: left;
-    font-weight: 600;
-}
-
-.block-searchresults h3 {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
-    border-bottom: 1px solid #fff;
-}
-
-.block-searchresults h3:hover {
-    border-bottom: thin solid #348296;
-    text-decoration: none;
-}
-
-.block-searchresults h3 a:hover {
-    text-decoration: none;
-}
-
-
-
-.block-searchresults .searchresult-nieuws-overzicht ol {
-    display: flex;
-    flex-direction: column;
-}
-
-.block-searchresults .searchresult-nieuws-overzicht li {}
-
-.block-searchresults .leadimage {
-    margin: 0 20px 0 0;
-    float: left;
-}
-
-.block-searchresults .searchresult-nieuws-overzicht .leadimage img {
-    overflow: hidden;
-    width: 120px;
-    height: 90px;
-    border: 1px solid #ccc;
-}
-
-.block-searchresults .searchresult-nieuws-overzicht h3:hover {
-    border-color: #D14200
-}
-
-.block-searchresults .searchresult-nieuws-overzicht h3 a {
-    color: #D14200
-}
-
-.block-searchresults .searchresult-evenementen-overzicht ol {
-    border: 0
-}
-
-.block-searchresults .searchresult-evenementen-overzicht li {
-    overflow: hidden;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.block-searchresults .searchresult-evenementen-overzicht h3:hover {
-    border-color: #D14200
-}
-
-.block-searchresults .searchresult-evenementen-overzicht h3 a {
-    color: #D14200
-}
-*/
-.search-zoekzoekresultaten {
-    padding: 32px 0;
-    margin-bottom: 32px;
+.block-searchresults {
+    margin: 32px 0;
     border-bottom: 1px solid $gray-20;
-    ;
 }
 
 .searchresult-default {
 
     h2 {
         @extend %h3;
+    }
+}
+
+.searchresults-orderlinks {
+    display: flex;
+    overflow: hidden;
+    float: right;
+    width: fit-content;
+    border: 1px solid $gray-50;
+    border-radius: 16px;
+
+    a,
+    a.active {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 4px 16px;
+        margin: 0;
+        @extend %pSmaller;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:visited {
+            @extend %visitedaslink;
+
+        }
+    }
+
+    a {
+        &::after {
+            width: 16px;
+            height: 16px;
+            margin-left: 4px;
+            display: inline-block;
+            content: url("../../images/angle-right-16px.svg");
+        }
+
+        &:hover {
+            color: $neutral-100;
+            background: $donkerblauw;
+        }
     }
 
     a.active {
@@ -106,62 +61,12 @@
 
 }
 
-.searchresults-orderlinks {
-    display: flex;
-    overflow: hidden;
-    float: right;
-    width: fit-content;
-    border: 1px solid $gray-20;
-    border-radius: 16px;
-
-    a,
-    a.active {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 4px 16px;
-        margin: 0;
-        @extend %pSmaller;
-        text-decoration: none;
-
-        &:visited {
-            color: $primary;
-        }
-
-    }
-}
-
-.searchresults-orderlinks {
-    a {
-        &::after {
-            width: 16px;
-            height: 16px;
-            margin-left: 4px;
-            display: inline-block;
-            content: url("../../images/angle-right-16px.svg");
-        }
-    }
-
-    a.active {
-        color: $neutral-100;
-
-        &::after {
-            content: url("../../images/angle-down-16px.svg");
-        }
-
-        &:visited {
-            color: $neutral-100;
-        }
-
-    }
-
-}
 
 .search-result-count,
 .search-result-index {
     @extend %pSmall;
     float: left;
-    margin-bottom: 8px;
+    margin: 0 0 8px 4px;
 }
 
 .search-wrapper {
@@ -182,20 +87,49 @@
     }
 
     li {
-        padding: 8px 0 16px 0;
-        margin-bottom: 16px;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 32px;
+
     }
+
 
     h3 {
         padding: 0;
+        margin: 0;
 
         a {
             color: $primary;
+            &:hover{
+                color: $oranje;
+            }
         }
     }
 
     .summary {
         @extend %pSmall;
 
+    }
+
+    .splitter {
+        display: none;
+    }
+    .meta{
+        margin: 8px 0;
+    }
+
+    .eventtype {
+        @extend %pSmaller;
+        font-weight: 500;
+        border: 1px solid $gray-50;
+        padding: 4px 8px;
+        border-radius: 16px;
+    }
+    .leadimage{
+        display: inline-block;
+        float: left;
+        margin-right: 16px;
+        width: 80px;
+        height: 80px;
     }
 }

@@ -1,7 +1,8 @@
 .anchor-alphabet {
     clear: both;
-    padding: 32px 0;
-    border-top: 1px solid $gray-20;
+    margin: 16px 0;
+    padding: 16px 0;
+    
 
     ul {
         display: flex;
@@ -26,6 +27,10 @@
         background: $lichtblauw;
 
         &:hover {
+            background: $donkerblauw;
+            color: $neutral-100;
+        }
+        &.active{
             background: $donkerblauw;
             color: $neutral-100;
         }

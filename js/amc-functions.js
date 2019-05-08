@@ -12,7 +12,11 @@ $(document).ready(function() {
 		navItems.each(function(index) {
 			// skip the homepage
 			if (index > 0) {
-				$(this).click(toggleNavFunction(index));
+				$(this).click(function(e){
+                    console.log(e);
+                    debugger;
+                    toggleNavFunction(index)
+                });
 			}
 		});
 	}

@@ -29,12 +29,51 @@ a.more {
     text-decoration: none;
     font-size: 18px !important;
 
-    &::after {
+    &:after {
         content: url("../../images/icon/arrow-right/24px-oranje.svg");
         margin-left: 4px;
 
     }
 }
-.oembed, .oembed-youtube {
-    position: static!important;
+
+a.mailto,
+a.extern {
+    display: flex;
+    align-items: center;
+
+    &:after {
+        display: inline-block;
+        content: "";
+        background: url("../../images/icon/functional/envelope.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 4px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+a.extern {
+    &:after {
+        background: url("../../images/icon/functional/external.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+}
+.column-wider{
+    a{
+        &:after{
+            display: none;
+        }  
+    }
+}
+
+.oembed,
+.oembed-youtube {
+    position: static !important;
+}
+
+%visitedaslink {
+    color: $primary;
 }

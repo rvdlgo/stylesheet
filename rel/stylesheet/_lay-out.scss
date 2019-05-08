@@ -1,7 +1,6 @@
 /* base */
 html {
     box-sizing: border-box;
-    font-size: 18px
 }
 
 *,
@@ -15,10 +14,11 @@ html {
 }
 
 /* end base */
-.skiplinks{
+.skiplinks {
     position: absolute;
     top: -100%;
 }
+
 #header-wrapper {
     position: fixed;
     top: 40px;
@@ -29,50 +29,38 @@ html {
     @extend %z-index-2dp;
 }
 
-#main {
-    
-
-}
+#main {}
 
 #main-inner {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     max-width: 1152px;
-    padding: 120px 16px 0 16px;
+    padding: 32px 16px 0 16px;
     margin: auto;
 }
 
-.clustertitle-wrapper {
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-}
-
 .column-wide {
-    flex-basis: 100%;
-    padding: 0 16px;
-
+    width: 100%;
     @include mq('tablet-landscape') {
-        flex-basis: 75%;
-        padding: 0 16px 0 0 ;
+        width: 75%;
+        padding-right: 8px;
+        float: left;
     }
 }
 
 .column-side {
-    flex-basis: 100%;
-    padding: 0 16px;
-     @include mq('tablet-landscape') {
-        flex-basis: 25%;
-         padding: 0 0 0 16px;
+    width: 100%;
+
+    @include mq('tablet-landscape') {
+        width: 25%;
+        padding-left: 24px;
+        float: right;
     }
 }
 
 
 .homepage {
     #main-wrapper {
-        background-image: url("../../images/foto-4.jpg");
+        background-image: url("../../images/Image/headerimage.jpg");
         background-position: top center;
         background-repeat: no-repeat;
 
@@ -87,13 +75,15 @@ html {
     #main {
         padding-top: 0;
     }
-    #main-inner{
-        padding: 120px 16px 0 16px;
+
+    #main-inner {
+        padding: 0 16px 0 16px;
     }
 
     .column-wide {
-        flex-basis: 100%;
+        width: 100%;
         padding: 32px 0 0 0;
+        margin-top: -80px; 
     }
 
     .column-side {

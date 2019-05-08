@@ -20,14 +20,13 @@ header {
 }
 
 .header_logo {
+    flex-basis: calc(288px + 24px);
+
     @include mq('tablet-landscape') {
         padding: 32px 24px 4px 24px;
         background-color: $neutral-100;
         border-radius: 40px;
         border-bottom: 2px solid $gray-30;
-    }
-    img{
-        
     }
 
 }
@@ -44,7 +43,7 @@ header {
             a {
                 display: inline-block;
                 color: $zwart;
-                @extend %h3;
+                @extend %h4;
                 padding-bottom: 4px;
                 border-bottom: 2px solid $neutral-100;
                 text-decoration: none;

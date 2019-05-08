@@ -1,8 +1,14 @@
 .listordered-amc_applicaties {
     border: 1px solid $gray-20;
     padding: 16px;
-    ol{
+
+    ol {
         @extend %ol;
+    }
+
+    h2,
+    h3 {
+        margin: 0;
     }
 
     a {
@@ -12,11 +18,15 @@
         margin-bottom: 4px;
         @extend %h4;
         text-decoration: none;
-        border-bottom: 2px solid $neutral-100;
 
         &:hover {
-            border-color: $oranje
+            color: $oranje;
         }
+
+        &:visited {
+            color: $zwart;
+        }
+
     }
 
 }

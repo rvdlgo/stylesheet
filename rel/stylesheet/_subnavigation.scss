@@ -1,54 +1,117 @@
+.subnavigation-default .close-menu {
+    display: none;
+}
+
 .clustertitle-wrapper {
-    border-bottom: 1px solid $oranje;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     margin-bottom: 32px;
     align-items: center;
 
     h2 {
-        flex-basis: calc(100% - 64px);
+        /* ie flex calc support */
+        flex-basis: 90%;
         @extend %h1;
-        padding: 0;
-        margin: 0 0 16xp;
+        padding: 0 8px 0;
 
         a {
             text-decoration: none;
-            color: $zwart;
+            color: $oranje;
 
             &:visited {
-                color: $zwart;
+                color: $oranje;
             }
 
             &:hover {
-                color: $oranje;
+                text-decoration: underline;
             }
         }
 
     }
 
+    .open-subnavigation {
+        &::before {
+            flex-basis: 64px;
+            margin: 0 8px 0 -8px;
+            content: url("../../images/subnavigation_menu.svg");
+            color: transparent;
+            cursor: pointer;
+        }
+
+        &:hover::before {
+            content: url("../../images/subnavigation_menu-hover.svg")
+        }
+    }
+
     .block-default {
         flex-basis: 100%;
     }
+
+    &:before {
+        content: "";
+        position: absolute;
+        background: $gray-10;
+        left: 0;
+        width: 100%;
+        height: 288px;
+        top: 0;
+        z-index: -1;
+    }
+
 }
 
 
-.subnavigation-default .close-menu {
+.subnavigation-default {
     display: none;
+    padding-bottom: 32px;
+    overflow: hidden;
+    background: $neutral-100;
+    padding: 16px;
+    border: 1px solid $gray-10;
+    margin-top: -16px;
+
+    ul {
+        @extend %ul;
+        width: 100%;
+
+        li {
+            display: inline-block;
+            width: 50%;
+            float: left;
+            padding-bottom: 16px;
+            padding-right: 16px;
+
+            a {
+                text-decoration: none;
+                font-weight: 500;
+                color: $zwart;
+
+                &:hover {
+                    color: $oranje;
+                }
+
+                &:visted {
+                    color: $zwart;
+                }
+            }
+
+            ul li {
+                padding-bottom: 0;
+
+                a {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
 }
 
-.open-subnavigation {
-    &::before {
-        margin-right: 8px;
-        content: url("../../images/subnavigation_menu.svg");
-        color: transparent;
-        cursor: pointer;
-    }
-
-    &:hover::before {
-        content: url("../../images/subnavigation_menu-hover.svg")
-    }
-}
 
 
-/* subnavigatie */
+/* subnavigatie flexbox 
 .subnavigation-default {
     display: none;
     width: 100%;
@@ -82,3 +145,4 @@
         }
     }
 }
+*/

@@ -1,18 +1,19 @@
 .event-header {
-    clear: both;
-    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid $gray-20;
 
     h2 a {
-        position: relative;
+        display: flex;
+        align-items: center;
         @extend %pSmall;
         color: $primary;
         float: right;
         text-decoration: none;
-        padding-right: 16px;
+        padding: 4px 0;
 
         &::after {
-            position: absolute;
             top: 2px;
             width: 16px;
             height: 16px;
@@ -20,7 +21,8 @@
             display: inline-block;
             content: url("../../images/angle-right-16px.svg")
         }
-        &:hover{
+
+        &:hover {
             color: $oranje;
         }
     }
@@ -28,8 +30,30 @@
     .event-date {
         @extend %pSmall;
         color: $zwart;
-        float: left;
+        line-height: 0;
+        padding-top: 16px;
+        text-transform: capitalize;
 
     }
 
+}
+
+.block-event_data {
+    display: flex;
+    flex-wrap: wrap;
+
+    .event_data {
+        flex-basis: 25%;
+        padding-right: 16px;
+
+        h2 {
+            @extend %h3;
+        }
+    }
+    .event_data_list {
+        @extend %ul;
+        li{
+            @extend %pSmall;
+        }
+    }
 }

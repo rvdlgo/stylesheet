@@ -1,6 +1,31 @@
-table {
-    margin: 20px 0 20px 0;
+.table-default {
+    display: block;
+    overflow: hidden;
+    text-align: left;
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    caption {
+        @extend %h2;
+        padding: 8px 0;
+        text-align: left;
+    }
+    th, td{
+        padding: 8px;
+        vertical-align: top;
+    }
+    th{
+        background: $lichtblauw;
+    }
+
+    td {
+        border-bottom: 1px solid $gray-20;
+    }
 }
+
 
 table.clear {
     width: 100%;
@@ -22,28 +47,6 @@ table.center {
     margin: 0 auto;
     clear: both;
 }
-
-th,
-td {
-    padding: 8px;
-    border: 1px solid $lichtblauw;
-}
-
 tr.odd {
     background-color: $gray-20;
-}
-
-th {
-    font-weight: 500;
-    background-color: $lichtblauw;
-}
-
-table caption {
-    color: $oranje;
-    padding: 32px 0 8px 0;
-}
-
-.gridtable td {
-    border: 0;
-    padding: 0
 }

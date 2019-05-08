@@ -1,27 +1,39 @@
 body {
     margin: 0;
     padding: 0;
-    background: $neutral-100;
-    font-family: 'museo-sans-rounded', sans-serif;
+    font-family: "museo-sans-rounded";
     font-weight: 300;
-    line-height: 1.45em;
+    font-size: 1rem;
+    line-height: 1.45;
     color: $zwart;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+
+    @include mq('tablet-portrait') {
+        font-family: "museo-sans-rounded";
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 1.45;
+    }
 }
 
 
 
 %h1 {
-    color: $zwart;
+    font-family: "museo-sans-rounded";
     font-weight: 500;
-    line-height: 1.25em;
+    font-size: 1.6875rem;
+    line-height: 1.25;
     letter-spacing: 0.76px;
-    font-size: 1.5rem;
+    color: $zwart;
 
     @include mq('tablet-portrait') {
-        font-size: 2.25rem;
+        font-family: "museo-sans-rounded";
+        font-weight: 500;
+        font-size: 2.5625rem;
+        line-height: 1.25;
+        letter-spacing: 0.15rem;
     }
 
 }
@@ -33,14 +45,17 @@ h1,
 }
 
 %h2 {
-    color: $oranje;
+    font-family: "museo-sans-rounded";
     font-weight: 500;
-    line-height: 1.25em;
-    letter-spacing: 0.5px;
-    font-size: 1.166666666666667rem;
+    font-size: 1.3125rem;
+    line-height: 1.25;
+    color: $oranje;
 
     @include mq('tablet-portrait') {
-        font-size: 1.5rem;
+        font-weight: 500;
+        font-size: 1.6875rem;
+        line-height: 1.25;
+        letter-spacing: 0.05rem;
     }
 
     /* verwijder text-transform: uppercase; maar kan redactioneel problemen opleveren*/
@@ -52,14 +67,18 @@ h2,
 }
 
 %h3 {
-    color: $zwart;
+    font-family: "museo-sans-rounded";
     font-weight: 500;
-    line-height: 1.25em;
-    letter-spacing: 0.33px;
-    font-size: 0.888888888888889rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: $zwart;
 
     @include mq('tablet-portrait') {
-        font-size: 1rem;
+        font-family: "museo-sans-rounded";
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: 0.05rem;
     }
 
 }
@@ -71,14 +90,15 @@ h3,
 
 
 %h4 {
-    color: $zwart;
+    font-family: "museo-sans-rounded";
     font-weight: 500;
+    font-weight: 500;
+    font-size: 0.888888888888889rem;
     line-height: 1.25em;
-    letter-spacing: 0.3px;
-    font-size: 0.777777777777778rem;
+    color: $zwart;
 
     @include mq('tablet-portrait') {
-        font-size: 0.888888888888889rem;
+        font-size: 1rem;
     }
 }
 
@@ -90,9 +110,9 @@ h4,
 %h5 {
     color: $zwart;
     font-weight: 500;
+    font-size: 0.875rem;
     line-height: 1.25em;
     letter-spacing: 0.26px;
-    text-transform: uppercase;
 }
 
 h5,
@@ -102,30 +122,26 @@ h5,
 
 %p {
     margin-bottom: 1rem;
-    font-size: 0.888888888888889rem;
-
-    @include mq('tablet-portrait') {
-        font-size: 1rem;
-    }
 }
 
 p,
 .p,
-.text, {
+.text,
+    {
     @extend %p;
 }
 
 %pSmall {
-    font-size: 0.777777777777778rem;
+    font-size: 0.888888888888889rem;
 
     @include mq('tablet-portrait') {
-        font-size: 0.888888888888889rem;
+        font-size: 1rem;
         ;
     }
 }
 
 %pSmaller {
-    font-size: 0.777777777777778rem;
+    font-size: 0.888888888888889rem;
 }
 
 %textdecorationnone {
@@ -152,7 +168,28 @@ strong {
         }
     }
 }
-time, .lastmodifieddate{
+
+.g-grid-row,
+.column-wider {
+    h2 {
+        font-size: 1.3125rem
+    }
+
+    h3 {
+        @extend %h4
+    }
+
+    h4 {
+        @extend %h5
+    }
+
+    p {
+        @extend %pSmall
+    }
+}
+
+time,
+.lastmodifieddate {
     @extend %pSmall;
 }
 
@@ -209,4 +246,9 @@ ul ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+ul, ol{
+    a{
+        text-decoration: none;
+    }
 }

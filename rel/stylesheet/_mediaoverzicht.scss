@@ -1,15 +1,11 @@
 .modiv-teaser .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
+    
 
     .item {
-        margin: 8px;
-        flex-basis: calc(50% - 16px);
-        border-top: 1px solid $gray-20;
-        padding-top: 16px;
-
+        flex-basis: 100%;
+        border: 1px solid $gray-20;
+        padding: 8px 16px;
+        margin-bottom: 16px;
         .thumb a img {
             width: 100%;
             height: auto;
@@ -18,35 +14,122 @@
 
     }
 }
-/* class aanpassen backend naar generiek */
-.modiv-Farmacopedia_image_titel_description .wrapper {
+
+
+.modiv-image_title_text .wrapper {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
+    flex-flow: column wrap;
+    margin-left: -16px;
+    margin-right: -16px;
 
     .item {
-        flex-basis: calc(33% - 32px);
-        @extend %z-index-4dp;
-        padding-bottom: 16px;
-        
-        a{
+        margin: 16px;
+
+        a {
             text-decoration: none;
-            color:$zwart;
-            &:hover{
-                color:$zwart;
+            color: $zwart;
+
+            &:hover {
+                color: $zwart;
+            }
+
+            > div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .thumb {
+                    flex-basis: 100%;
+                    margin-right: 16px;
+
+                }
+
+                .title {}
+
+                .text {
+                    display: none
+                }
             }
         }
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 16px;
-        }
-        .title, .text{
-            padding: 0 16px;
+    @include mq('tablet-portrait') {
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .item {
+            flex-basis: calc(33.33% - 32px);
+
+            a div {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .thumb {
+                    min-width: 100%;
+                    margin-right: 0;
+
+                    img {
+                        min-width: 100%;
+                    }
+                }
+
+                .text,
+                .title {
+                    word-break: break-word;
+                    display: block;
+                    padding: 0 16px;
+                }
+
+            }
+
         }
 
     }
+}
+.modiv-title_date {
+    .wrapper {
+        display: flex;
+        flex-flow: column wrap;
+        margin-left: -16px;
+        margin-right: -16px;
+
+        .item {
+            margin: 16px;
+            padding-bottom: 16px;
+
+            a {
+                text-decoration: none;
+                color: $zwart;
+
+                &:hover,
+                &:visited {
+                    color: $zwart;
+                }
+            }
+
+            .title,
+            time {
+                padding: 0 16px;
+            }
+
+        }
+    }
+
+    @include mq('tablet-small') {
+        .wrapper {
+            flex-flow: row wrap;
+
+            .item {
+                flex-basis: calc(50% - 32px);
+            }
+        }
+
+    }
+
+    @include mq('tablet-portrait') {
+        .wrapper .item {
+            flex-basis: calc(33.33% - 32px);
+        }
+    }
+
 }

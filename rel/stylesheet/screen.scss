@@ -11,6 +11,7 @@
 @import 'lay-outs';
 @import 'images';
 @import 'links';
+@import 'download';
 
 /* molecules */
 @import 'buttons';
@@ -31,7 +32,9 @@
 @import 'poll';
 @import 'noodmelding';
 @import 'intro';
-
+@import 'autocomplete';
+@import 'datepicker';
+@import 'events';
 /* organismes */
 @import 'skin';
 @import 'mediaoverzicht';
@@ -41,6 +44,7 @@
 
 /* csm */
 @import 'incontext';
+@import 'cms';
 
 
 /* back-up up 
@@ -72,62 +76,10 @@ a.meer:visited {
     text-decoration: none;
 }
 
-.ui-autocomplete {
-    background-color: #fff;
-    padding: 0 16px;
-    display: block!important;
-}
-
-.ui-helper-hidden-accessible {
-    display: none
-}
-
-.ui-autocomplete a {
-    display: block;
-    margin: 0;
-    padding: 0px 10px;
-    cursor: pointer;
-}
-
-.ui-autocomplete a:hover {
-    text-decoration: none;
-    background-color: #f2f2f2;
-}
 
 
 
 
-
-
-.article-default {}
-
-
-.event_data_list {
-    margin-bottom: 5px;
-    list-style-type: none !important;
-    padding-left: 0 !important;
-}
-
-.block-event_data {
-    overflow: hidden;
-    width: 760px;
-    margin-top: 20px;
-    background-color: #D7ECF1;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-}
-
-.event_data {
-    float: left;
-    width: 230px;
-    margin: 10px
-}
-
-.event_data h2 {
-    color: #131516;
-    font-size: 0.8em;
-    font-weight: 300;
-}
 
 
 

@@ -1,20 +1,8 @@
-@mixin responsive-ratio($x,$y, $pseudo: false) {
-    $padding: unquote( ( $y / $x ) * 100 + '%' );
-    @if $pseudo {
-        &:before {
-            @include pseudo($pos: relative);
-            width: 100%;
-            padding-top: $padding;
-        }
-    } @else {
-        padding-top: $padding;
-    }
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
-/* voorbeeld gebruik
-div {
-    @include responsive-ratio(16,9);
-}
-*/
 figure{
     margin: 0;
 }
@@ -40,9 +28,6 @@ figure{
 }
 
 .image-default .center {
-    clear: both;
-    display: block;
-    margin: 10px auto;
     text-align: center
 }
 

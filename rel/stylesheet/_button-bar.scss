@@ -2,11 +2,14 @@
     align-items: stretch;
 }
 
-.buttonBar .g-grid-span4 {
+.buttonBar .g-grid-span2 {
     background: $lichtblauw;
     border-radius: 16px 16px 16px 0;
-    &:hover{
-        @extend %z-index-4dp;
+    padding-top: 4px;
+    @extend %z-index-2dp;
+
+    &:hover {
+        @extend %z-index-6dp;
     }
 
 }

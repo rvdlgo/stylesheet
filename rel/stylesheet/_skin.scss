@@ -15,6 +15,10 @@
     h3 {
         @extend %h2;
     }
+    font{
+        @extend %p;
+        color: $zwart;
+    }
 
 }
 #HCB_comment_form_box form{
