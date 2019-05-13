@@ -41,6 +41,8 @@
 .block-event_data {
     display: flex;
     flex-wrap: wrap;
+    padding: 16px;
+    background: $lichtblauw;
 
     .event_data {
         flex-basis: 25%;

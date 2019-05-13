@@ -8,6 +8,18 @@ fieldset {
     vertical-align: baseline;
 }
 
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 /* einde reset */
 
 input[type="text"],
@@ -41,30 +53,20 @@ label {
 
 .form-default {
     padding-left: 32px;
-    border-left-width: 2px;
-    border-left-style: solid;
-    -webkit-border-image:
-        -webkit-gradient(linear, 0 100%, 0 0, from($oranje), to(rgba(0, 55, 65, 0))) 1 100%;
-    -webkit-border-image:
-        -webkit-linear-gradient(bottom, $oranje, rgba(0, 55, 65, 0)) 1 100%;
-    -moz-border-image:
-        -moz-linear-gradient(bottom, $oranje, rgba(0, 55, 65, 0)) 1 100%;
-    -o-border-image:
-        -o-linear-gradient(bottom, $oranje, rgba(0, 55, 65, 0)) 1 100%;
-    border-image:
-        linear-gradient(to top, $oranje, rgba(0, 55, 65, 0)) 1 100%;
 
     .formsteps {
-            border-bottom: 1px solid $gray-50;
-    padding-bottom: 16px;
+        border-bottom: 1px solid $gray-50;
+        padding-bottom: 16px;
+
         ol {
             @extend %ul;
-                display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
         }
-        .step{
+
+        .step {
             display: inline-flex;
             width: 16px;
             height: 16px;
@@ -72,7 +74,8 @@ label {
             border: 1px solid $gray-70;
             border-radius: 16px;
         }
-        .step.active{
+
+        .step.active {
             background: $oranje;
             border-color: $oranje;
         }

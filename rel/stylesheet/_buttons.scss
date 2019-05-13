@@ -14,7 +14,31 @@
         @extend %z-index-6dp;
     }
 }
+%button-secundair {
+    color: $zwart;
+    border: 0;
+    @extend %h3;
+    border-radius: 8px;
+    border: 1px solid $gray-40;
+    padding: 12px 16px;
+    background-color: $neutral-100;
+    @extend %z-index-2dp;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $donkerblauw;
+        color: $neutral-100;
+        @extend %z-index-6dp;
+    }
+}
 
 input[type="submit"] {
  @extend %button-primair
+}
+input[type="submit"].next {
+ @extend %button-secundair;
+}
+input[type="submit"].previous {
+ @extend %button-secundair;
 }

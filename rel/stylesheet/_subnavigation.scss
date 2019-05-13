@@ -85,9 +85,11 @@
             padding-right: 16px;
 
             a {
+                @extend %h4;
                 text-decoration: none;
                 font-weight: 500;
                 color: $zwart;
+
 
                 &:hover {
                     color: $oranje;
@@ -103,6 +105,7 @@
 
                 a {
                     font-weight: 300;
+                    color: $zwart;
                 }
             }
         }

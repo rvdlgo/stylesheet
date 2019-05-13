@@ -11,3 +11,13 @@
 .column-wider .g-grid-row {
     display: none;
 }
+
+.block-is-inzet {
+    .pagetitle, .event-header {
+        display: none!important;
+    }
+    .article-default h2{
+        @extend %h4;
+    }
+}
+

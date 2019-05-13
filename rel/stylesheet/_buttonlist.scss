@@ -19,13 +19,15 @@
         @extend %h4;
         text-decoration: none;
 
+        &:visited {
+            color: $zwart;
+        }
+
         &:hover {
             color: $oranje;
         }
 
-        &:visited {
-            color: $zwart;
-        }
+
 
     }
 

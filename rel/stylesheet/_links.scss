@@ -34,12 +34,17 @@ a.more {
         margin-left: 4px;
 
     }
+    &:visited{
+        color: $zwart;
+    }
+    &:hover{
+        color: $oranje;
+    }
 }
 
 a.mailto,
 a.extern {
-    display: flex;
-    align-items: center;
+    display: inline-block;
 
     &:after {
         display: inline-block;
@@ -48,8 +53,8 @@ a.extern {
         background-size: contain;
         background-repeat: no-repeat;
         margin-left: 4px;
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -76,4 +81,12 @@ a.extern {
 
 %visitedaslink {
     color: $primary;
+}
+%externNone {
+    &:after {
+        background: none;
+        width: 0;
+        height: 0
+
+    }
 }

@@ -6,6 +6,7 @@ body {
     font-size: 1rem;
     line-height: 1.45;
     color: $zwart;
+    background: $neutral-100;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
@@ -104,7 +105,7 @@ h3,
 
 h4,
 .h4 {
-    @extend %h4;
+    @extend %h3;
 }
 
 %h5 {
@@ -124,11 +125,17 @@ h5,
     margin-bottom: 1rem;
 }
 
+
 p,
 .p,
 .text,
     {
     @extend %p;
+}
+
+h6,
+.h6 {
+    @extend %pSmall;
 }
 
 %pSmall {
@@ -247,8 +254,10 @@ ul ul {
     margin: 0;
     padding: 0;
 }
-ul, ol{
-    a{
+
+ul,
+ol {
+    a {
         text-decoration: none;
     }
 }

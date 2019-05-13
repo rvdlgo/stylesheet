@@ -28,7 +28,11 @@ figure{
 }
 
 .image-default .center {
-    text-align: center
+    max-width: 100%;
+    img{
+        width: 50%;
+        margin: auto;
+    }
 }
 
 .image-default em {

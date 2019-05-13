@@ -27,7 +27,7 @@
 .afdelingspagina,
 .afdelingspaginaPaginatitel {
     .column-wide {
-        flex-basis: 100%;
+        width: 100%;
         padding-top: 40px;
     }
 }
@@ -95,7 +95,7 @@
     }
 
     .subnavigation-default {
-        display: none;
+        display: flex;
 
         @include mq('tablet-portrait') {
             display: block;

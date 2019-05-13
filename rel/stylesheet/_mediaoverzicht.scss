@@ -1,15 +1,32 @@
 .modiv-teaser .wrapper {
-    
+
 
     .item {
         flex-basis: 100%;
         border: 1px solid $gray-20;
         padding: 8px 16px;
         margin-bottom: 16px;
+
         .thumb a img {
             width: 100%;
             height: auto;
             margin-bottom: 16px;
+        }
+
+        h2 {
+            @extend %h3;
+
+            a {
+                color: $primary;
+                text-decoration: none;
+                &:visited{
+                    color: $primary;
+                }
+                &:hover{
+                    color: $oranje;
+                }
+            }
+
         }
 
     }
@@ -86,6 +103,7 @@
 
     }
 }
+
 .modiv-title_date {
     .wrapper {
         display: flex;
