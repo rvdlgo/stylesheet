@@ -45,14 +45,16 @@
     &:before {
         content: "";
         position: absolute;
-        z-index: -100;
+        background: #e7e7e7;
         left: 0;
-        top: 64px;
         width: 100%;
-        height: 200px;
+        height: 288px;
+        top: 0;
+        z-index: -1;
         background-color: #F2DB45;
-
     }
+
+
 }
 
 /* geen navigatie op home */
@@ -64,45 +66,29 @@
 }
 
 /* aanpassing subnavigatie */
-.afdelingspaginaPaginatitel .clustertitle-wrapper {
-    flex-direction: row;
-    border: 0;
-    padding: 0;
+.clustertitle-wrapper {
     margin: 32px 0 0 0;
+    width: 100%;
 
     &:before {
-        content: "";
-        position: absolute;
-        z-index: -100;
-        left: 0;
-        top: 64px;
-        width: 100%;
-        height: 204px;
         background-color: #F2DB45;
-
 
     }
 
     h2 {
-        @extend %h1;
-        text-align: center;
         flex-basis: 100%;
-        border: 0;
 
-        a:hover {
-            color: $zwart;
-        }
-    }
-
-    .subnavigation-default {
-        display: flex;
-
-        @include mq('tablet-portrait') {
+        a {
             display: block;
-            padding: 8px 16px;
-            background: transparent;
+            @extend %h1;
+            text-align: center;
+            color: $zwart;
 
-
+            &:hover,
+            &:visited {
+                color: $zwart;
+                text-decoration: none;
+            }
         }
 
     }
@@ -117,24 +103,31 @@
     }
 }
 
-.afdelingspaginaPaginatitel .subnavigation-default {
-    display: block;
-    padding: 0 !important;
 
+.subnavigation-default {
+    display: block;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 19px 0 0 0;
 
     ul {
-        border: 0;
-        padding: 0;
-        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
 
         li {
+            width: auto;
             flex-basis: auto;
+            padding: 0;
 
 
             a {
+                display: inline-block;
                 font-size: 16px;
                 font-weight: 500;
-                padding: 18px 16px 16px 16px;
+                padding: 18px 0 16px 0;
+                margin: 0 16px;
 
                 &:hover {
                     border-bottom: 4px solid $oranje;
@@ -144,8 +137,88 @@
 
 
             }
+            &:first-child a{
+                margin-left: 0;
+                
+            }
 
         }
+    }
+}
+.modiv-image_title_text .wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: -16px;
+    margin-right: -16px;
+
+    .contenttype--page {
+        margin: 16px;
+        @extend %z-index-2dp;
+        transition-duration: 0.3s;
+        &:hover{
+           @extend %z-index-4dp; 
+        }
+        
+
+        a {
+            text-decoration: none;
+            color: $zwart;
+
+            &:hover {
+                color: $zwart;
+            }
+
+            > div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .thumb {
+                    flex-basis: 100%;
+                    margin-right: 16px;
+
+                }
+
+                .title {}
+
+                .text {
+                    display: none
+                }
+            }
+        }
+    }
+
+    @include mq('tablet-portrait') {
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .item {
+            flex-basis: calc(33.33% - 32px);
+
+            a div {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .thumb {
+                    min-width: 100%;
+                    margin-right: 0;
+
+                    img {
+                        min-width: 100%;
+                    }
+                }
+
+                .text,
+                .title {
+                    word-break: break-word;
+                    display: block;
+                    padding: 0 16px;
+                }
+
+            }
+
+        }
+
     }
 }
 
@@ -159,15 +232,16 @@
 
     .page {
         margin: 8px;
-        
+
         flex-basis: 100%;
         padding: 16px;
-        @include mq('tablet-portrait'){
+
+        @include mq('tablet-portrait') {
             flex-basis: calc(33.33% - 16px);
         }
     }
 
-    .title{
+    .title {
         @extend %h2;
     }
 
@@ -175,55 +249,22 @@
         @extend %pSmall;
     }
 }
-
-/* nog uit te zoeken of we een search opzet kunnen gebruiken 
-.searchopzet {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .block-default {
-        flex-basis: calc(75% - 16px);
+.tabsactive{
+    .g-grid-row:nth-child(odd){
+        background: $lichtblauw;
     }
-
-    .block-default:first-of-type {
-        flex-basis: calc(25% - 16px);
+      .g-grid-row:first-child{
+        background: $donkerblauw;
+          h4{
+              color: $neutral-100;
+          }
     }
-
-    .facet-title:nth-child(1),
-    .facet-items:nth-child(2),
-    .search-result-count,
-    .search-result-index,
-    .block-more {
-        display: none;
-    }
-
-    .search-wrapper ol {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        li {
-            flex-basis: calc(50% - 16px);
-            @extend %z-index-2dp;
-            padding: 16px;
-
-            &:hover {
-                @extend %z-index-4dp;
-            }
-
-            a {
-                text-decoration: none;
-                color: $zwart;
-
-                &:hover,
-                &:visited {
-                    color: $zwart;
-                }
-            }
+    .g-grid-row{
+        margin: 0;
+        align-items: stretch;
+        .g-grid-span6{
+            border-right: 1px solid $gray-20;
         }
     }
-
+    
 }
- nog uit te zoeken of we een search opzet kunnen gebruiken */

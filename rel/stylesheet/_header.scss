@@ -17,7 +17,16 @@ header {
     input[type="submit"] {
         padding: 8px 16px;
     }
+    input[type="search"]{
+        width: 240px;
+        &:focus{
+            width: 240px;
+            border-width: 1px;
+        }
+    }
+
 }
+
 
 
 .header_logo {

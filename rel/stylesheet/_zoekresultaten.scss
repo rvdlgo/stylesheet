@@ -18,8 +18,8 @@
     border: 1px solid $gray-50;
     border-radius: 16px;
 
-    a,
-    a.active {
+    a
+        {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -27,13 +27,11 @@
         margin: 0;
         @extend %pSmaller;
         font-weight: 500;
-        color: $neutral-100;
+        color: $zwart;
         text-decoration: none;
 
         &:visited {
-          color: $neutral-100;
-
-
+            color: $zwart;
         }
     }
 
@@ -102,7 +100,8 @@
 
         a {
             color: $primary;
-            &:hover{
+
+            &:hover {
                 color: $oranje;
             }
         }
@@ -116,7 +115,8 @@
     .splitter {
         display: none;
     }
-    .meta{
+
+    .meta {
         margin: 8px 0;
     }
 
@@ -127,7 +127,8 @@
         padding: 4px 8px;
         border-radius: 16px;
     }
-    .leadimage{
+
+    .leadimage {
         display: inline-block;
         float: left;
         margin-right: 16px;

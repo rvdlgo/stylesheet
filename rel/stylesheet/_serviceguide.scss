@@ -1,0 +1,16 @@
+.amcintramediaitemsserviceguide {
+    .contactinfo {
+        float: right;
+        margin-bottom: 64px;
+        margin-top: 19px;
+        border-left: 1px solid $gray-20;
+        padding-left: 16px;
+        width: 33.33%
+    }
+    .button{
+       @extend %button-primair; 
+        display: inline-block;
+        margin: 16px 0;
+        text-decoration: none;
+    }
+}

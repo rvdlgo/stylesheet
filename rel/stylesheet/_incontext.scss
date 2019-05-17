@@ -7,10 +7,13 @@
     background-color: $lichtblauw;
 }
 
-div.editableContainer {
+.incontext div.editableContainer {
     min-height: 40px;
 }
 
 .incontext div.editableContainer {
     min-height: 40px;
+}
+.incontext .block-is-inzet{
+    height: auto;
 }
