@@ -1,0 +1,31 @@
+.photogallery-default {
+    .photo-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 16px;
+        background: $lichtblauw;
+
+        a {
+            flex-basis: 80px;
+            height: 80px;
+            margin: 16px 8px;
+            border: 1px solid $gray-20;
+            @extend %z-index-2dp;
+            transition: all 0.5s ease;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            &:hover {
+                @extend %z-index-6dp;
+                flex-basis: 88px;
+                height: 88px;
+                margin: 12px 4px;
+
+            }
+        }
+    }
+}

@@ -12,12 +12,29 @@
     display: none;
 }
 
+/* knutsel fix op research */
 .column-wider {
-    .pagetitle, .event-header {
-        display: none!important;
+
+    .pagetitle,
+    .event-header {
+        display: none !important;
     }
-    .article-default h2{
+
+    .article-default h2 {
         @extend %h4;
     }
 }
 
+/* import externe html met paragraph */
+.geDiagramContainer {
+    z-index: -1 !important;
+}
+
+/* bewerkbaar maken sitenavigatie */
+.rte_container .site-navigation.displaynone {
+    display: block !important;
+}
+
+.rte_container .site-navigation {
+    position: relative
+}

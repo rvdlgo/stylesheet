@@ -18,13 +18,16 @@
     font{
         @extend %p;
         color: $zwart;
+        font-size: 18px;
     }
 
 }
+/*
 #HCB_comment_form_box form{
     display: flex;
     flex-direction: column;
 }
+
 #HCB_comment_form_box form div:last-of-type {
     display: flex;
     flex-direction: row;
@@ -47,7 +50,7 @@
         padding: 8px 0;
     }
 }
-
+*/
 #HCB_comment_box .hcb-link {
     cursor: pointer
 }

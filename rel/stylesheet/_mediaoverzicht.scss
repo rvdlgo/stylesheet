@@ -19,10 +19,12 @@
             a {
                 color: $primary;
                 text-decoration: none;
-                &:visited{
+
+                &:visited {
                     color: $primary;
                 }
-                &:hover{
+
+                &:hover {
                     color: $oranje;
                 }
             }
@@ -35,12 +37,18 @@
 
 .modiv-image_title_text .wrapper {
     display: flex;
-    flex-flow: column wrap;
-    margin-left: -16px;
-    margin-right: -16px;
-
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
     .item {
-        margin: 16px;
+        @extend %z-index-2dp;
+        flex-basis: 30%;
+        margin: 16px 0;
+        transition: all .3s cubic-bezier(.4, 0, 1, 1);
+
+        &:hover {
+            @extend %z-index-6dp;
+        }
 
         a {
             text-decoration: none;
@@ -49,71 +57,48 @@
             &:hover {
                 color: $zwart;
             }
+            /*
 
             > div {
                 display: flex;
-                flex-direction: row;
-                align-items: center;
+                flex-flow: column wrap;
+                
+                align-items: stretch;
+
 
                 .thumb {
                     flex-basis: 100%;
-                    margin-right: 16px;
-
+                    img{
+                        width: 100%}
                 }
 
-                .title {}
-
-                .text {
-                    display: none
-                }
-            }
-        }
-    }
-
-    @include mq('tablet-portrait') {
-        flex-direction: row;
-        justify-content: flex-start;
-
-        .item {
-            flex-basis: calc(33.33% - 32px);
-
-            a div {
-                flex-direction: column;
-                align-items: flex-start;
-
-                .thumb {
-                    min-width: 100%;
-                    margin-right: 0;
-
-                    img {
-                        min-width: 100%;
-                    }
-                }
-
-                .text,
-                .title {
-                    word-break: break-word;
-                    display: block;
+                .title, .text {
                     padding: 0 16px;
                 }
 
             }
-
+            */
         }
-
     }
+    
 }
 
 .modiv-title_date {
     .wrapper {
         display: flex;
-        flex-flow: column wrap;
-        margin-left: -16px;
-        margin-right: -16px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
 
         .item {
-            margin: 16px;
-            padding-bottom: 16px;
+            flex-basis: 31%;
+            margin: 24px 0;
+            padding-bottom: 8px;
+            @extend %z-index-2dp;
+            transition: all .3s cubic-bezier(.4, 0, 1, 1);
+            &:hover{
+                @extend %z-index-6dp;
+            }
 
             a {
                 text-decoration: none;
@@ -125,28 +110,15 @@
                 }
             }
 
-            .title,
-            time {
+            .title{
                 padding: 0 16px;
+                margin: 16px 0 0 0;
+            }
+            time{
+                padding: 0 16px;
+                @extend %pSmaller;
             }
 
-        }
-    }
-
-    @include mq('tablet-small') {
-        .wrapper {
-            flex-flow: row wrap;
-
-            .item {
-                flex-basis: calc(50% - 32px);
-            }
-        }
-
-    }
-
-    @include mq('tablet-portrait') {
-        .wrapper .item {
-            flex-basis: calc(33.33% - 32px);
         }
     }
 

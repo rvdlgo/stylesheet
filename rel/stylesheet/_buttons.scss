@@ -14,6 +14,7 @@
         @extend %z-index-6dp;
     }
 }
+
 %button-secundair {
     color: $zwart;
     border: 0;
@@ -34,11 +35,16 @@
 }
 
 input[type="submit"] {
- @extend %button-primair
+    @extend %button-primair
 }
+
 input[type="submit"].next {
- @extend %button-secundair;
+    @extend %button-secundair;
+    padding-right: 24px;
+    background: url("../../images/icon/arrow-right/24px-oranje.svg") no-repeat center right;
+    
 }
+
 input[type="submit"].previous {
- @extend %button-secundair;
+    @extend %button-secundair;
 }

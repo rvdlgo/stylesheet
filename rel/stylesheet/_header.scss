@@ -12,13 +12,13 @@ header {
         margin: auto;
     }
 
-
     input[type="search"],
     input[type="submit"] {
         padding: 8px 16px;
     }
     input[type="search"]{
         width: 240px;
+        height: 40px;
         &:focus{
             width: 240px;
             border-width: 1px;
@@ -26,8 +26,6 @@ header {
     }
 
 }
-
-
 
 .header_logo {
     flex-basis: calc(288px + 24px);

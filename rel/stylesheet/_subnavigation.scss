@@ -23,10 +23,11 @@
         }
 
     }
-
+    
+    
     .open-subnavigation {
         &::before {
-            flex-basis: 64px;
+            /*flex-basis: 64px;*/
             margin: 0 8px 0 -8px;
             content: url("../../images/subnavigation_menu.svg");
             color: transparent;
@@ -37,6 +38,15 @@
             content: url("../../images/subnavigation_menu-hover.svg")
         }
     }
+    .close-subnavigation{
+        &::before{
+            content: url("../../images/close-subnavigation.svg");
+        }
+        &:hover::before {
+            content: url("../../images/close-subnavigation-hover.svg")
+        }
+    }
+
 
     .block-default {
         flex-basis: 100%;
@@ -63,7 +73,7 @@
     background: $neutral-100;
     padding: 16px;
     border: 1px solid $gray-10;
-    margin-top: -16px;
+    margin-top: 16px;
 
     ul {
         @extend %ul;
@@ -75,6 +85,7 @@
             float: left;
             padding-bottom: 16px;
             padding-right: 16px;
+            list-style: none;
 
             a {
                 @extend %h4;

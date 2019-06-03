@@ -2,7 +2,7 @@
     clear: both;
     margin: 16px 0;
     padding: 16px 0;
-    
+
 
     ul {
         display: flex;
@@ -30,7 +30,8 @@
             background: $donkerblauw;
             color: $neutral-100;
         }
-        &.active{
+
+        &.active {
             background: $donkerblauw;
             color: $neutral-100;
         }
@@ -76,11 +77,23 @@
             @extend %ul;
             flex-basis: calc(50% - 16px);
             padding-top: 8px;
-               
+
         }
-        li a{
+
+        li a {
             display: block;
             padding: 4px 0;
         }
     }
 }
+.listbulleted-alphabet a {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+.listbulleted-alphabet .wrapper li a {
+    visibility: visible;
+    top: 0;
+}
+
