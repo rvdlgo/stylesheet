@@ -62,10 +62,8 @@
 #HCB_comment_box textarea {
     display: block;
     width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    min-height: 92px;
     box-sizing: border-box;
-    width: 100%
 }
 
 #HCB_comment_box blockquote {
@@ -105,7 +103,9 @@
 }
 
 #HCB_comment_box input {
-    margin-left: 0;
+    margin: 8px 0;
+    width: 50%;
+    height: 48px;
 
 }
 
@@ -119,11 +119,19 @@
     opacity: 0;
     overflow: hidden;
     position: absolute;
-    z-index: -1
+    z-index: -1;
+    display: none!important;
 }
 
 #HCB_comment_box input.inputfile + label {
-    display: inline
+    display: inline;
+    display: none!important;
+}
+#HCB_comment_box a{
+    display: none!important;
+}
+#HCB_comment_box .submit.btn{
+    width: auto;
 }
 
 /* end inline */

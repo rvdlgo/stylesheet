@@ -25,6 +25,8 @@
 .modiv-buttonbar .wrapper {
     display: flex;
     flex-direction: row;
+    align-content: stretch;
+    justify-content: space-between;
     margin: 16px -16px;
 
     a {
@@ -32,7 +34,7 @@
     }
 
     .item {
-        width: calc(16.66% -32px);
+        flex-basis: 16.66%;
         padding: 16px;
         margin: 0 16px;
         @extend %z-index-2dp;
@@ -46,6 +48,10 @@
     }
     .thumb{
         padding: 0 8px;
+    }
+    img{
+        width: 100%;
+        height: auto;
     }
 
     .title {

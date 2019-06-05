@@ -86,14 +86,10 @@
         }
     }
 }
-.listbulleted-alphabet a {
+.listbulleted-alphabet .h2-wrapper a {
     display: block;
     position: relative;
     top: -150px;
     visibility: hidden;
-}
-.listbulleted-alphabet .wrapper li a {
-    visibility: visible;
-    top: 0;
 }
 
