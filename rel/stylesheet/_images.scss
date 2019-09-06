@@ -9,7 +9,6 @@ figure{
 
 .image-default {
     line-height: 1em;
-    padding-bottom: 1em;
 }
 
 .image-default .center {
@@ -30,13 +29,13 @@ figure{
 .image-default .center {
     max-width: 100%;
     img{
-        width: 100%;
         margin: auto;
     }
 }
 
 .image-default em {
-    display: block;
+    display: inline-block;
+    margin-top: 8px;
 }
 
 .g-grid-span3 .image-default,

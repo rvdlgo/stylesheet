@@ -23,8 +23,8 @@
         }
 
     }
-    
-    
+
+
     .open-subnavigation {
         &::before {
             /*flex-basis: 64px;*/
@@ -38,10 +38,12 @@
             content: url("../../images/subnavigation_menu-hover.svg")
         }
     }
-    .close-subnavigation{
-        &::before{
+
+    .close-subnavigation {
+        &::before {
             content: url("../../images/close-subnavigation.svg");
         }
+
         &:hover::before {
             content: url("../../images/close-subnavigation-hover.svg")
         }
@@ -114,3 +116,5 @@
         }
     }
 }
+
+

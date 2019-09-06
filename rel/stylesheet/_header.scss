@@ -1,5 +1,5 @@
 /* logo */
-header {
+header.page {
     display: flex;
     justify-content: flex-start;
     padding: 0 0.888888888888889rem;
@@ -12,32 +12,9 @@ header {
         margin: auto;
     }
 
-    input[type="search"],
-    input[type="submit"] {
-        padding: 8px 16px;
-    }
-    input[type="search"]{
-        width: 240px;
-        height: 40px;
-        &:focus{
-            width: 240px;
-            border-width: 1px;
-        }
-    }
-
 }
 
-.header_logo {
-    flex-basis: calc(288px + 24px);
 
-    @include mq('tablet-landscape') {
-        padding: 32px 24px 4px 24px;
-        background-color: $neutral-100;
-        border-radius: 40px;
-        border-bottom: 2px solid $gray-30;
-    }
-
-}
 
 .navigation-default {
     ul {
@@ -70,6 +47,99 @@ header {
 
 
 }
+
+.header_logo {
+    flex-basis: calc(288px + 24px);
+
+    @include mq('tablet-landscape') {
+        padding: 32px 24px 4px 24px;
+        background-color: $neutral-100;
+        border-radius: 40px;
+        border-bottom: 2px solid $gray-30;
+    }
+
+    .image-default {
+        padding-bottom: 1em;
+    }
+
+}
+
+header {
+    position: relative;
+    .search-default {
+        display: none;
+        position: absolute;
+        right: 0;
+        background: $oranje;
+        z-index: -1;
+
+        .fieldgrp {
+            margin: auto;
+            padding: 8px 16px;
+        }
+    
+    }
+
+    input[type="search"] {
+
+        height: 40px;
+
+        &:focus {
+            border-width: 1px;
+        }
+    }
+    input[type="submit"]{
+        padding: 10px 16px;
+        background: $donkerblauw;
+        &:hover{
+            @extend %z-index-6dp;
+        }
+    }
+}
+
+.headerright {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+
+    a {
+        display: flex;
+        align-items: center;
+        margin-right: 32px;
+        color: $zwart;
+        @extend %h4;
+        text-decoration: none;
+        &:hover{
+           color: $oranje;
+        }
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            margin-right: 8px;
+            background: url("../../images/icon_functional_phone.svg") no-repeat center;
+            background-size: 18px 18px;
+            border: 1px solid $gray-50;
+        }
+
+    }
+
+    .searchToggle {
+        border-radius: 40px !important;
+        height: 40px;
+        width: 40px;
+        background: $oranje url("../../images/icon_functional_search.svg") no-repeat center;
+        background-size: 18px 18px;
+        cursor: pointer;
+        &:hover{
+            background-color: $donkerblauw;
+        }
+    }
+}
+
 
 .search-cluster.dienstengids {
     border-bottom: 1px solid $gray-20;

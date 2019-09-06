@@ -1,13 +1,18 @@
-#main-inner .block-is-inzet:nth-child(3) {
-    flex-basis: 100%;
-    background-color: #F2DB45;
-    margin-top: -16px;
+.column-wide .block-is-inzet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    padding: 16px 0;
+    background: yellow;
 
-    .wrapper {}
+    .paragraph-melding {
+        max-width: 1120px;
+        margin: auto;
+    }
 
     .text {
-
-        padding: 32px;
         @extend %h3;
         color: $zwart;
     }

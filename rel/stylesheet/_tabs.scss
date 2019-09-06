@@ -1,14 +1,24 @@
 /* reset */
-.tabsactive,
-.tabsinactive {
-    h1, h2, h3, h4, h5, h6, p{
-        @extend %h4;
+.tabsrow {
+
+    .tabsactive,
+    .tabsinactive {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            @extend %h4;
+        }
     }
 }
 
-.tabs{
-   clear: both;
-   margin: 32px 0;
+.tabs {
+    clear: both;
+    margin: 32px 0;
 }
 
 .tabsrow {
@@ -16,6 +26,7 @@
     flex-direction: row;
     border: 1px solid $gray-20;
     border-bottom: 0;
+
     .tabsactive,
     .tabsinactive {
         justify-content: space-between;
@@ -26,29 +37,35 @@
         border-bottom: 1px solid $gray-20;
         border-right: 1px solid $gray-20;
     }
+
     .tabsactive {
         font-weight: 600;
         border-bottom: 0;
     }
+
     .tabsinactive {
         color: $primary;
         cursor: pointer;
     }
 }
-.tabsinactive:hover{
+
+.tabsinactive:hover {
     background: $lichtblauw;
 }
+
 .tabsrow div:last-of-type {
     border-right: 0;
 }
+
 .tabspanes {
-        
-    .tabsactive{
+
+    .tabsactive {
         border: 1px solid $gray-20;
         border-top: 0;
         padding: 32px;
     }
-    .tabsinactive{
+
+    .tabsinactive {
         display: none;
     }
 }
