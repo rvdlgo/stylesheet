@@ -1,33 +1,33 @@
-$(document).ready(function() {
- 	function toggleNavFunction(i){
-		return function(){
-			$('.subnavigation-default').hide();
-			$('.site-navigation').not('.s-nav-'+ i).hide();
-			$('.s-nav-'+ i).toggle();
-	        return false;
-		}
-	}
-	/* aanpassingen BO */
-	if ($(".headerright .searchToggle").length){ //check if available
-		$(".headerright .searchToggle").click(function() { // Click event
-			$("header .search-default").toggle(); // Toggle between display block and none
-		});
-	}
-	/* /aanpassingen BO */
-	var navItems = $('#navigation a');
-	if (navItems.length) {
-		navItems.each(function(index) {
-			// skip the homepage
-			if (index > 0) {
-				$(this).click(toggleNavFunction(index));
-			}
-		});
-	}
+$(document).ready(function () {
+    function toggleNavFunction(i) {
+        return function () {
+            $('.subnavigation-default').hide();
+            $('.site-navigation').not('.s-nav-' + i).hide();
+            $('.s-nav-' + i).toggle();
+            return false;
+        }
+    }
+    /* aanpassingen BO */
+    if ($(".headerright .searchToggle").length) { //check if available
+        $(".headerright .searchToggle").click(function () { // Click event
+            $("header .search-default").toggle(); // Toggle between display block and none
+        });
+    }
+    /* /aanpassingen BO */
+    var navItems = $('#navigation a');
+    if (navItems.length) {
+        navItems.each(function (index) {
+            // skip the homepage
+            if (index > 0) {
+                $(this).click(toggleNavFunction(index));
+            }
+        });
+    }
 
-    $('.site-navigation .close-menu').click(function() {
+    $('.site-navigation .close-menu').click(function () {
         $('.site-navigation').hide();
     });
-    $('.subnavigation-default .close-menu').click(function() {
+    $('.subnavigation-default .close-menu').click(function () {
         $('.subnavigation-default').hide();
     });
 
@@ -35,26 +35,26 @@ $(document).ready(function() {
      * Subnavigation (span tekst verwijdert)
      */
     $('<span class="open-subnavigation"></span>').insertAfter($('.clustertitle-wrapper').find('h2'));
-    $('.open-subnavigation').click(function() {
+    $('.open-subnavigation').click(function () {
         $('.site-navigation').hide();
         $('.subnavigation-default').toggle();
         return false;
     });
 
-// console.log($('h1.pagetitle').find('a'));
+    // console.log($('h1.pagetitle').find('a'));
     if (($('.h1-wrapper h1').find('a')).length) {
         // console.log($('h1.pagetitle').find('a'));
         return false;
-    }
-    else {
+    } else {
         $('<a href="javascript:history.back();"></a>').prependTo('.h1-wrapper h1');
     }
 });
-    /*
-     * tabs
-     */
+/*
+ * tabs
+ */
 function TabsActivate(rootnode, selectedindex) {
     var rootdivs;
+
     function findDivs(parentnode) {
         var kids = parentnode.childNodes;
         var len = kids.length;
@@ -62,8 +62,8 @@ function TabsActivate(rootnode, selectedindex) {
         var result = [];
         var kid;
 
-        for (i=0; i<len; i++) {
-            kid =  /*F5_*/  F5_Deflate_index( /*_5F##*/ kids /*F5_*/ , /*_5F#[#*/ i /*F5_*/ ) /*_5F#]#*/ ;
+        for (i = 0; i < len; i++) {
+            kid = /*F5_*/ F5_Deflate_index( /*_5F##*/ kids /*F5_*/ , /*_5F#[#*/ i /*F5_*/ ) /*_5F#]#*/ ;
             if (kid.nodeName.toLowerCase() === "div") {
                 result.push(kid);
             }
@@ -74,9 +74,10 @@ function TabsActivate(rootnode, selectedindex) {
     function activatePane(panes, selectedindex) {
         var classname;
         var i;
-        for (i=0; i < panes.length; i++) {
-            classname =  /*F5_*/  F5_Invoke_replace( F5_Deflate_index( /*_5F##*/ panes /*F5_*/ , /*_5F#[#*/ i /*F5_*/ ) /*_5F#]#*/ .className /*F5_*/ , /*_5F#.replace(#*/ "tabsactive","tabsinactive");
-             /*F5_*/  F5_Deflate_index( /*_5F##*/ panes /*F5_*/ , /*_5F#[#*/ i /*F5_*/ ) /*_5F#]#*/ .className =  /*F5_*/  F5_Invoke_replace( /*_5F##*/ classname /*F5_*/ , /*_5F#.replace(#*/ "tabsinactive",
+        for (i = 0; i < panes.length; i++) {
+            classname = /*F5_*/ F5_Invoke_replace(F5_Deflate_index( /*_5F##*/ panes /*F5_*/ , /*_5F#[#*/ i /*F5_*/ ) /*_5F#]#*/ .className /*F5_*/ , /*_5F#.replace(#*/ "tabsactive", "tabsinactive");
+            /*F5_*/
+            F5_Deflate_index( /*_5F##*/ panes /*F5_*/ , /*_5F#[#*/ i /*F5_*/ ) /*_5F#]#*/ .className = /*F5_*/ F5_Invoke_replace( /*_5F##*/ classname /*F5_*/ , /*_5F#.replace(#*/ "tabsinactive",
                 i === selectedindex ? "tabsactive" : "tabsinactive");
         }
     }
@@ -86,11 +87,11 @@ function TabsActivate(rootnode, selectedindex) {
     activatePane(findDivs(rootdivs[1]), selectedindex);
     return false;
 }
-  $(function() {
-    $( ".accordion" ).accordion({
-      heightStyle: "content"
+$(function () {
+    $(".accordion").accordion({
+        heightStyle: "content"
     });
-  });
+});
 
 
 /*
